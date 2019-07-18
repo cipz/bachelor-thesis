@@ -114,7 +114,7 @@
 \usepackage{afterpage}
 \usepackage{tabulary}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
-
+\usepackage{pdfpages}
 
 % Pseudocode
 \usepackage{algorithm}

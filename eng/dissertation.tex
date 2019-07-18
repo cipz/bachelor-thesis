@@ -5,50 +5,47 @@
 \documentclass{Dissertate}
 
 \begin{document}
-
-% the front matter
-\input{frontmatter/personalize}
-% \maketitle
-% \copyrightpage
-\frontmatter
-\setstretch{\dnormalspacing}
-% \abstractpage
-% \tableofcontents
-% %\authorlist
-% \listoffigures
-%\dedicationpage
-% \acknowledgments
-
-% \doublespacing
-
-% include each chapter...
-\setcounter{chapter}{0}  % start chapter numbering at 1
-\include{chapters/introduction}
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
-\include{chapters/chapter4}
-\include{chapters/conclusion}
-
-\addcontentsline{toc}{chapter}{References}
-%\bibliographystyle{unstr}
-\bibliography{references}
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Acknowledgments}
-\acknowledgments
-
-
-% \clearpage
-% \bibliography{references}
-% \addcontentsline{toc}{chapter}{References}
-% \bibliographystyle{apalike2}
-
-% \include{endmatter/colophon}
+	
+	\includepdf[pages={1-2}]{red_frontmatter/main.pdf}
+	
+	% the front matter
+	\input{frontmatter/personalize}
+	% \maketitle
+	% \copyrightpage
+	\frontmatter
+	\setstretch{\dnormalspacing}
+	% \abstractpage
+	% \tableofcontents
+	% %\authorlist
+	% \listoffigures
+	%\dedicationpage
+	% \acknowledgments
+	
+	% \doublespacing
+	
+	% include each chapter...
+	\setcounter{chapter}{0}  % start chapter numbering at 1
+	\include{chapters/introduction}
+	\include{chapters/chapter1}
+	\include{chapters/chapter2}
+	\include{chapters/chapter3}
+	\include{chapters/chapter4}
+	\include{chapters/conclusion}
+	
+	\addcontentsline{toc}{chapter}{References}
+	%\bibliographystyle{unstr}
+	\bibliography{references}
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Acknowledgments}
+	\acknowledgments
+	
+	
+	% \clearpage
+	% \bibliography{references}
+	% \addcontentsline{toc}{chapter}{References}
+	% \bibliographystyle{apalike2}
+	
+	% \include{endmatter/colophon}
 
 \end{document}
-
-
-%TODO:  page numbering
-%todo vedere ordine pagine e pagine da lasciare bianche
-%todo mettere copyright?

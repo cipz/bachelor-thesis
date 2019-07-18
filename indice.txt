@@ -82,19 +82,40 @@ chapter 3: processi e metodologie dell'agile
 		misto a causa dei pochi dipendenti che hanno ancora una responsabilità ampia all'interno dell'azienda ma pensano che si possa incorporare agile
 		processi di business
 
-chapter 4: implementazione (installazione e configurazione iniziale)
+chapter 4: Jira and Confluence
+
+	- analisi dei tool
+		a cosa serve ciascuno (grafici o tabelle con funzionalità)
+		si possono installare plugin
+
+	- come riescono a coprire i bisogni dell'azienda
+		come mai sono stati scelti proprio questi tool
+		cosa riescono a fare in più rispetto a quelli attuali
+
+	- analisi dei casi d'uso
+		riprendere necessità dell'azienda
+		fare un paio di uml con le varie figure aziendali e con cosa si andranno ad interfacciare
+
+	- che comunità c'è dietro?
+		ho cercato informazioni su internet
+		documentazione
+		atlassian community
+
+chapter 5: implementazione (installazione e configurazione iniziale)
 
 	- con cosa lavoro (hw e sw)
-		installazione dei software
-		ho lavorato su una vm
+		installazione dei software (riferimento a capitolo precedente)
+		ho lavorato su una vm centos con queste caratteristiche ...
 
 	- cosa ho notato che serviva installare insieme
 		database
+		mi ha fatto ritardare rispetto al piano di lavoro? no, mi ero aspettato ci fossero software terzi da configurare / imparare
 
 	- configurazione iniziale dei tool
 		interconnessione tra i tool
 
 	- prima variazione dei requisiti in corso d'opera
+		non usare bitbucket ma gitlab
 		visto il grosso ammontare di elementi customizzabili è stato necessario scremare le cose e capire cosa si poteva facilmente aggiungere e cosa lasciare per dopo
 		abbellimento dell'environment
 
@@ -102,20 +123,29 @@ chapter 4: implementazione (installazione e configurazione iniziale)
 		creazione di progetti di mock
 		interconnetterli
 		capire il workflow delle issue
+		utilizzare gitlab (con account personale su server aziendale e progettini di mock) per effettuare transizioni automatiche delle issue (spiegare correlazione tra progetti in gitlab e in jira)
 
 	- personalizzazione interfaccia grafica
 		a causa della poca disponibilità in questo primo periodo di marco e paolo che utilizzeranno questo tool in maniera intensiva rispetto al tutor, ho fatto un task secondario come quello della personalizzazione dell'interfaccia grafica
 
-capitolo 5: primi progetti di mock veritieri e primi feedback
+	- snapshot della macchina per salvare il lavoro svolto per ora
+		parlare di milestone / baseline
+		come le ho pensate nel piano di lavoro
+
+capitolo 6: primi progetti di mock più veritieri e primi feedback
 
 	- progetti di mock
+		idee del tutor
+		prime demo con lui per capire se questo tool effettivamente copre le necessità di base dell'azienda
 
-	- integrazione di gitlab
+	- integrazione effettiva con gitlab
 		visto integrazione nativa
 		scelta di utilizzare un plugin
+		costa ma è migliore (descrivere da quale punto di vista)
 
-	- riunioni e cosa ne è uscito
-		con paolo / marco / fabio / hesham
+	- prime riunioni "serie" e cosa ne è uscito
+		con paolo / marco / fabio e successivamente con hesham
+		sto rispettando il piano di lavoro iniziale? sono in ritardo / anticipo?
 
 	- nuovo cambio di requisiti
 		cosa può essere implementato subito, cosa no, come viene usato
@@ -123,30 +153,64 @@ capitolo 5: primi progetti di mock veritieri e primi feedback
 
 	- scrittura della bozza di documentazione e passaggio della documentazione in confluence
 
-capitolo 6: passaggio in produzione
+	- nuovo snapshot della macchina
+		nuova baseline / milestone
+
+capitolo 7: passaggio in produzione
 	
 	After the approval for using the tools by other departments (R&D) it's time to transition it / move it to production
 
 	- migrazione da redmine
+		tool automatico di migrazione
+		collegamento con redmine, lo fa in maniera automatica
+		e se va male? c'è sempre lo snapshot
 
 	- primi progetti non di mock (con importanza effettiva [anche se minima] ed in corso)
+		configurati da paolo / hesham
 
-	- fine tuning del progetto / prodotto
+	- fine tuning del progetto / prodotto finale
+		interazione con le persone
+		in base alle necessità degli utenti e di come lo usano faccio minime modifiche in produzione
+		miglioramento della documentazione
 
-capitolo 7: feedback finale e cosa vorrebbero che venga implementato in futuro
+	- come viene utilizzato questo tool
+		è veramente agile? 
+		è un dialetto?
+		è un misto?
+		perchè athonet lo sta usando in questo modo?
+
+capitolo 8: feedback finale e cosa vorrebbero che venga implementato in futuro
 
 	- feedback finale 
+		da parte del tutor
+		da parte dei vari project manager (marco / paolo)
+		da parte di gianluca ?
+		da parte di tutti gli utenti
 
-capitolo 8: conclusioni
+	- quali piani ha athonet in futuro per questo tool
+		arrivare ad utilizzare agile in maniera rigida?
+		continuare a fare misto?
+
+capitolo 9: conclusioni
 
 	- diagramma di gantt finale
+		come si discosta da quello iniziale
+		cosa ha causato questo discostamento
+		ho pianificato male
 
 	- cosa ho imparato
+		principalmente il way of working aziendale
+		come funzionano questi tool
+		il loro scopo di "ordinare" un'azienda
+
+	- considerazioni personali sul progetto
+		in un'azienda in crescita è molto utile darsi dei paletti
+		in athonet funzionerà una cosa del genere?
+		sta funzionando questo tool adesso per il breve tempo che l'ho visto io in produzione?
 
 appendice a: glossario
 
 	parola + breve descrizione + relativo riferimento a dove trovarla nel testo
-
 
 appendice b: bibliografia
  

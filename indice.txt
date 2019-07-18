@@ -1,0 +1,152 @@
+
+
+abstract 
+
+list of figures
+
+list of tables
+
+abstract
+
+	introduzione a significato di way of working
+	l'evoluzione negli ultimi anni
+	la crescita in base al numero di dipendenti
+	necessità di organizzazione delle azienda e la necessità di avere una gerarchia (o simil gerarchia)
+
+[sommario (è necessario tradurre l'abstract nel corrispettivo italiano?)]
+
+chapter 1: introduction
+
+	- premise
+		introduzione al documento
+		che cos'è quello che si sta leggendo
+		che cosa contiene in generale
+
+	- l'azienda
+		breve paragrafo in cui descrivo l'azienda
+			quando è stata fondata
+			con che visione
+			di cosa si occupa
+			scrivere che ha vinto tot premi e per cosa (link ad articolo)
+			dove sono adesso (in via di crescita e sviluppo)
+			cosa pensano di fare di buono nel mondo e per il futuro
+
+	- il progetto
+		cosa mi ha portato a scegliere questo stage rispetto ad altri
+		breve descrizione del progetto, da riprendere successivamente
+
+	- organizzazione del testo
+		com'è strutturato il testo in capitoli con una breve frase descrittiva per ciascuno
+
+chapter 2: descrizione dello stage
+
+	- i bisogni dell'azienda
+		che cosa sta utilizzando athonet adesso per la gestione del lavoro e del tracking
+		come issue tracking system, gestore di wiki interno, ecc --> tanti tool scorrelati tra loro
+		perchè athonet ha la necessità di utilizzare tool differenti 
+		(+ stabili, meglio documentati, miglior UI / UX etc.)
+
+	- pianificazione
+		in base a cosa ho pianificato
+		come ho parlato con il tutor per fare capire i loro bisogni, lo scopo finale, e come arrivarci
+		step da fare
+
+	- riassunto piano di lavoro con grafici
+		preventivo ore + lavoro
+		risultato del paragrafo precedente
+
+chapter 3: processi e metodologie dell'agile 
+
+	Possibile introduzione del tipo "Before getting into what I have concretely achieved / implemented, let's take a better look at what agile is and how it came to be" (overview)
+
+	- breve storia dell'agile
+		cosa c'era prima dell'agile
+		quando dove e perchè c'era la necessità
+
+	- il manifesto agile
+		i 4 punti fondamentali del manifesto agile
+
+	- i dialetti / cugini dell'agile
+		kanban, etc.
+
+	- applicazioni dell'agile 
+		modello spotify
+		come viene applicato in google
+		e le piccole aziende come athonet come fanno? (misto)
+
+	- utilità agile
+		l'agile può andare a completamente sostituire il resto
+		cosa ne pensano gli utenti
+
+	- che tipo di agile viene utilizzato da athonet
+		misto a causa dei pochi dipendenti che hanno ancora una responsabilità ampia all'interno dell'azienda ma pensano che si possa incorporare agile
+		processi di business
+
+chapter 4: implementazione (installazione e configurazione iniziale)
+
+	- con cosa lavoro (hw e sw)
+		installazione dei software
+		ho lavorato su una vm
+
+	- cosa ho notato che serviva installare insieme
+		database
+
+	- configurazione iniziale dei tool
+		interconnessione tra i tool
+
+	- prima variazione dei requisiti in corso d'opera
+		visto il grosso ammontare di elementi customizzabili è stato necessario scremare le cose e capire cosa si poteva facilmente aggiungere e cosa lasciare per dopo
+		abbellimento dell'environment
+
+	- primo periodo di "gioco" / capire i prodotti "in action"
+		creazione di progetti di mock
+		interconnetterli
+		capire il workflow delle issue
+
+	- personalizzazione interfaccia grafica
+		a causa della poca disponibilità in questo primo periodo di marco e paolo che utilizzeranno questo tool in maniera intensiva rispetto al tutor, ho fatto un task secondario come quello della personalizzazione dell'interfaccia grafica
+
+capitolo 5: primi progetti di mock veritieri e primi feedback
+
+	- progetti di mock
+
+	- integrazione di gitlab
+		visto integrazione nativa
+		scelta di utilizzare un plugin
+
+	- riunioni e cosa ne è uscito
+		con paolo / marco / fabio / hesham
+
+	- nuovo cambio di requisiti
+		cosa può essere implementato subito, cosa no, come viene usato
+		campi e workflow custom
+
+	- scrittura della bozza di documentazione e passaggio della documentazione in confluence
+
+capitolo 6: passaggio in produzione
+	
+	After the approval for using the tools by other departments (R&D) it's time to transition it / move it to production
+
+	- migrazione da redmine
+
+	- primi progetti non di mock (con importanza effettiva [anche se minima] ed in corso)
+
+	- fine tuning del progetto / prodotto
+
+capitolo 7: feedback finale e cosa vorrebbero che venga implementato in futuro
+
+	- feedback finale 
+
+capitolo 8: conclusioni
+
+	- diagramma di gantt finale
+
+	- cosa ho imparato
+
+appendice a: glossario
+
+	parola + breve descrizione + relativo riferimento a dove trovarla nel testo
+
+
+appendice b: bibliografia
+ 

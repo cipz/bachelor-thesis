@@ -18,6 +18,8 @@
 %
 \RequirePackage{etoolbox}
 
+\usepackage{graphicx}
+
 % Line spacing: dsingle/ddouble
 %   Whether to use single- or doublespacing.
 \newtoggle{DissertateSingleSpace}
@@ -126,6 +128,7 @@
 \usepackage{lscape}
 \renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Algorithm # is <chapter>.<algorithm>
 
+\captionsetup{justification=centering}
 
 % Abbreviations
 \newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \dotfill}}

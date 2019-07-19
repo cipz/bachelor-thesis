@@ -247,5 +247,5 @@ appendice a: glossario
 
 	parola + breve descrizione + relativo riferimento a dove trovarla nel testo
 
+
 appendice b: bibliografia
- 

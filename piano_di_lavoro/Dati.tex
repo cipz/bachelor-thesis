@@ -1,0 +1,119 @@
+%----------------------------------------------------------------------------------------
+%   USEFUL COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\dipartimento}{Dipartimento di Matematica ``Tullio Levi-Civita''}
+
+%----------------------------------------------------------------------------------------
+% 	USER DATA
+%----------------------------------------------------------------------------------------
+
+% Data di approvazione del piano da parte del tutor interno; nel formato GG Mese AAAA
+% compilare inserendo al posto di GG 2 cifre per il giorno, e al posto di 
+% AAAA 4 cifre per l'anno
+\newcommand{\dataApprovazione}{\today}
+
+% Dati dello Studente
+\newcommand{\nomeStudente}{Stefan Ciprian}
+\newcommand{\cognomeStudente}{Voinea}
+\newcommand{\matricolaStudente}{1143057}
+\newcommand{\emailStudente}{stefanciprian.voinea@studenti.unipd.it}
+\newcommand{\telStudente}{+39 328 179 6441}
+
+% Dati del Tutor Aziendale
+\newcommand{\nomeTutorAziendale}{Fabio}
+\newcommand{\cognomeTutorAziendale}{Giust}
+\newcommand{\emailTutorAziendale}{fabio.giust@athonet.com}
+\newcommand{\telTutorAziendale}{+39 3497589727}
+\newcommand{\ruoloTutorAziendale}{Senior System Architect}
+
+% Dati dell'Azienda
+\newcommand{\ragioneSocAzienda}{Athonet S.R.L.}
+\newcommand{\indirizzoAzienda}{ Via Cà del Luogo, 8, 36050 Bolzano vicentino (VI)}
+\newcommand{\sitoAzienda}{https://www.athonet.com/}
+\newcommand{\emailAzienda}{mail@mail.it}
+\newcommand{\partitaIVAAzienda}{P.IVA 12345678999}
+
+% Dati del Tutor Interno (Docente)
+\newcommand{\titoloTutorInterno}{Prof.}
+\newcommand{\nomeTutorInterno}{Armir}
+\newcommand{\cognomeTutorInterno}{Bujari}
+
+\newcommand{\prospettoSettimanale}{
+     % Personalizzare indicando in lista, i vari task settimana per settimana
+     % sostituire a XX il totale ore della settimana
+    \begin{itemize}
+		\item \textbf{Prima Settimana (40 ore)}
+		\begin{itemize}
+			\item Studio della suite Atlassian
+			\item Inizio della configurazione dell'ambiente di lavoro e dell'infrastruttura
+		\end{itemize}
+		\item \textbf{Seconda Settimana (40 ore)} 
+		\begin{itemize}
+			\item Studio della suite Atlassian
+			\item Fine della configurazione dell'ambiente di lavoro e dell'infrastruttura
+			\item Installazione della suite Atlassian
+		\end{itemize}
+		\item \textbf{Terza Settimana (24 ore)} 
+		\begin{itemize}
+			\item Installazione della suite Atlassian
+			\item Configurazione ed integrazione dei prodotti
+		\end{itemize}
+		\item \textbf{Quarta Settimana (36 ore)} 
+		\begin{itemize}
+			\item Configurazione ed integrazione dei prodotti
+
+		\end{itemize}
+		\item \textbf{Quinta Settimana (40 ore)} 
+		\begin{itemize}
+			\item Test con dati di mock
+		\end{itemize}
+		\item \textbf{Sesta Settimana (40 ore)} 
+		\begin{itemize}
+			\item Test da parte degli utenti
+			\item Fine tuning del prodotto
+		\end{itemize}
+		\item \textbf{Settima Settimana (40 ore)} 
+		\begin{itemize}
+			\item Test da parte degli utenti
+			\item Sviluppo della documentazione
+			\item Fine tuning del prodotto
+		\end{itemize}
+		\item \textbf{Ottava Settimana (40 ore)} 
+		\begin{itemize}
+			\item Test da parte degli utenti
+			\item Sviluppo della documentazione
+		\end{itemize}
+		\item \textbf{Nona Settimana (40 ore)} 
+		\begin{itemize}
+			\item Test da parte degli utenti
+			\item Sviluppo della documentazione
+			\item Eventuale migrazione in ambiente di produzione
+		\end{itemize}
+		\item \textbf{Decima Settimana (40 ore)} 
+		\begin{itemize}
+			\item Eventuale migrazione in ambiente di produzione
+			\item Presentazione del lavoro
+		\end{itemize}
+    \end{itemize}
+}
+
+% Indicare il totale complessivo (deve essere compreso tra le 300 e le 320 ore)
+\newcommand{\totaleOre}{}
+
+\newcommand{\obiettiviObbligatori}{
+	 \item \underline{\textit{O01}}: tutti i software del nuovo sistema devono essere correttamente configurati;
+ 	 \item \underline{\textit{O02}}: tutti i software del nuovo sistema devono essere in grado di comunicare tra loro;
+	 \item \underline{\textit{O03}}: deve essere presente una documentazione chiara ed appropriata sia per chi utilizza il software sia per chi lo andrà a mantenere;
+	 
+}
+
+\newcommand{\obiettiviDesiderabili}{
+	 \item \underline{\textit{D01}}: possibilità di integrazione con la suite di prodotti Microsoft Office;
+	 \item \underline{\textit{D02}}: possibilità di effettuare personalizzazioni tramite l'utilizzo di script che andranno ad interagire con i software che compongono il sistema;
+}
+
+\newcommand{\obiettiviFacoltativi}{
+	 \item \underline{\textit{F01}}: possibilità di migrazione dei dati relativi a profetti già in produzione sul nuovo sistema;
+	 \item \underline{\textit{F02}}: possibilità di trasportare il sistema in ambiente di produzione rimpiazzando (anche in maniera graduale) quello già esistente;
+}

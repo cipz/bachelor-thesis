@@ -245,7 +245,7 @@
 	\maketitle
 %	\frontispiece
 %	\newpage
-	\dedicationpage
+%	\dedicationpage
 	\abstractpage
 	\sommario
 	\tableofcontents

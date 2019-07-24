@@ -18,6 +18,8 @@
 %
 \RequirePackage{etoolbox}
 
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[automake, indexonlyfirst, numberline]{glossaries}
 \usepackage{graphicx}
 
 % Line spacing: dsingle/ddouble
@@ -81,7 +83,6 @@
 \usepackage{hyperref}
 \RequirePackage{url}
 \RequirePackage{amssymb}
-\RequirePackage{amssymb}
 \RequirePackage{mathspec}
 %\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{EB Garamond}
 %\setmathrm{EB Garamond}
@@ -101,6 +102,10 @@
                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \RequirePackage{microtype}
+
+\glossarystyle{altlist}
+\makeglossaries
+\input{glossary.tex}
 
 % Tikz
 \usepackage{tikz}
@@ -269,6 +274,7 @@
 	\cleardoublepage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
+	
 }
 
 \newcommand{\cover}{
@@ -405,4 +411,4 @@
     \include{endmatter/colophon}
 }
 
-
+\renewcommand{\glsnamefont}[1]{\uppercase{\bfseries #1}}

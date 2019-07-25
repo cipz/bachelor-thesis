@@ -6,8 +6,8 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 
 \chapter{Jira and Confluence: the essentials}
 
-Now that we have understood the concept of Agile, let's get to know the tools that we are using to implementing it.
-Jira and Confluence are software tools developed and maintained by the Australian company Atlassian.
+Now that we have understood the concept of Agile, let's get to know the Jira and Confluence, the software used to implement it.
+These are proprietary tools are developed and maintained by the Australian company Atlassian.
 
 \begin{figure}[H]
 	\centering
@@ -15,38 +15,39 @@ Jira and Confluence are software tools developed and maintained by the Australia
 	\caption{The logos of \textit{Atlassian}, \textit{Jira}, \textit{Confluence} and \textit{Jira Service Desk}}
 \end{figure}
 
-%todo aggiungere issue tracking system a glossario
-Jira is a proprietary Issue Tracking System was first released in 2002, the product name is a truncation of \textit{Gojira}, the Japanese word for Godzilla. This is a reference to another IST that was dominating the market, which is Bugzilla.
+Jira is a proprietary Issue Tracking System that was first released in 2002, this product's name is a truncation of Gojira, the Japanese word for Godzilla.
+This is a reference to another ITSs that was dominating the market at the time, Bugzilla.
 % https://www.workzone.com/blog/jira-alternatives/
-Now the competitors of Jira are software like, for example, Redmine, VersionOne, PivotalTracker, Workzone or integrated ISTs in repositories like GitHub's or GitLab's issue trackers.
-Athonet's choice has been Redmine because it's open source (this implies it's free of commision), it has a medium large community behind it and the plugins allow to integrate it with other internal tools used for issue tracking.
+Now the competitors of Jira are other software like, for example, Redmine, VersionOne, PivotalTracker, Workzone or integrated ITSs in repositories like GitHub's or GitLab's issue trackers.
+Athonet's previous choice was Redmine because it's open source (this implies it's free of commision), it has a medium large community of people that use it and maintain it behind and the plugins allow the integration with other tools used internally like repositories or software for reporting customer requests, for example.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.4\textwidth]{resources/redmine_logo}\\
+	\includegraphics[width=.6\textwidth]{resources/redmine_logo}\\
 	\caption{\textit{Redmine}'s logo}
 \end{figure}
 
-%todo aggiungere wiki a glossario
-Confluence, on the other hand, is designed as a collaboration platform for sharing knowledge
+Confluence, on the other hand, is designed as a collaboration platform for sharing knowledge like internal documents, product specifications, meeting notes and can be used as an internal wiki for the company and even for the public.
+Atlassian released the first version of Confluence in 2004, saying its purpose was to build ``\textit{an application that was built to the requirements of an enterprise knowledge management system, without losing the essential, powerful simplicity of the wiki in the process}''.
 %https://en.wikipedia.org/wiki/Confluence_(software)
-Atlassian released Confluence 1.0 on March 25, 2004, saying its purpose was to build "an application that was built to the requirements of an enterprise knowledge management system, without losing the essential, powerful simplicity of the wiki in the process."
 
-Like Jira, it's a proprietary tool the first version was released in 2004.
+Since the first releases of these products, Atlassian has developed and acquired new tools like Bamboo, Clover, Crowd, Crucible, and FishEye, all orientated towards collaboration, content sharing, issue tracking, time scheduler, etc.
 
-Both Jira and Confluence are written in Java
-
-Othe than these tools Atlassian has acquired / developed other tools like Bamboo, Clover, Crowd, Crucible, and FishEye.
+Both Jira and Confluence are written in Java.
 
 \section{Understanding what they can do}
-These tools are made to be integrated with one another, not only because they are made by the same company but because they play well together.
-Integrating an Issue Tracking with a platform able to share documents and thoughts
-a cosa serve ciascuno (grafici o tabelle con funzionalità)\\
-%http://www.akeles.com/what-are-the-differences-between-jira-software-jira-service-desk-and-jira-core/
-si possono installare plugin
-% licensing
+These tools are made to be integrated with one another, not only because they are made by the same company but they are strictly correlated.
+Integrating an issue tracker with a platform able to share documents and thoughts allows a more granular analysis of the problem.
+This means that in the company they can store meeting notes and documents related to the project in Confluence, then convert them to Issues in Jira.
+
+Even though there is a license to pay to use these tools it is worth it.
+
+Plugins can extend by far the usage and integration with other tools and the Atlassian Marketplace is full of them.
+
+Let's now analyze them better.
 	
 	%https://www.atlassian.com/software/jira/guides/getting-started/overview#key-terms-to-know
+	%http://www.akeles.com/what-are-the-differences-between-jira-software-jira-service-desk-and-jira-core/
 	\subsection{Jira}
 	
 		At first it was just jira, then it specialized

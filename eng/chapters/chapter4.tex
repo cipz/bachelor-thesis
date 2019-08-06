@@ -44,7 +44,7 @@ It is structured in four main sections, each representing a period:
 	
 	If a webpage in the documentation is related to an issue, the latter is showed at the end of the page with its status and a link to its dedicated section.
 	
-	%todo rivedere userbase
+	%todo rivedere parola userbase
 	The Confluence and Jira documentation are both written and hosted using Confluence, showing how powerful can be this tool for handling a wiki for such a complex software that has a large userbase.
 	
 	Confluence documentation is structured like Jira's, very easy to access and consult.
@@ -54,22 +54,102 @@ It is structured in four main sections, each representing a period:
 	
 \section{Initial installation and configuration}
 	
-	Study of the documentation and installation on the meantime, learn by doing
+	During the second week, while studying the documentation I went ahead and started configuring the software.
+
+	In order to install the Atlassian tools I was given a CentOS VM with 512GB of storage and 32GB of RAM.
+		
+	%todo logo centos
 	
-	\subsection{Work tools and installation}
-		
-		Linux workstation and CentOS VM with 512GB of storage and 32GB of RAM
+	To connect with the remote machine, which was in a controlled testing environment, I used Remmina, a remote desktop client for Linux operating systems.
+	This allowed me to easily connect to the machine to install software or to troubleshoot it in case of a failure.
 	
-		installazione dei software\\
-		
-		As refered to 
-		
-		ho lavorato su una vm centos con queste caratteristiche ...
-		
-	\subsection{Additional software}
-		POSTGRES\\
-		mi ha fatto ritardare rispetto al piano di lavoro? no, mi ero aspettato ci fossero software terzi da configurare / imparare
+	%todo rivedere ripetizioni
+	As for the documentation phase, the first software I installed was Jira, by following the official documentation.
+	%https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{resources/jira_installation}\\
+		\caption{The issues related with Jira and Confluence are handled by a dedicated Jira Cloud instance}
+	\end{figure}
 	
+	% todo aggiungere riferimento a paragrafo
+	As told in ... Jira requires a database to work properly.
+	For the first installation, which was made for testing purposes, the embedded H2 database was enough.
+	
+	%todo aggiungere immagine prima pagina di jira appena installato
+	
+	The first thing that I have done after the installation was getting acquainted with the interface and understanding how Jira's components interconnect with each other.
+	To do this I have created some mock projects that I filled with issues, it is here that I understood the concept of Board in Jira.
+	Experimenting with workflows was one of the most important things to do, because these are fundamental in an issue tracking system's configuration and are strictly connected to the concept of Board.
+	
+	% todo inserire immagine di board
+	
+	After understanding the fundamentals of this software and getting to know it's basic features, I went ahead and installed Portfolio.
+	
+	%todo aggiungere riferimento
+	This plugin, as told in ... helps visualizing the issues on a roadmap, which was one of the most important requirements.
+	
+	Installing Portfolio was easy, I just followed the instructions on the documentation to install the latest version of the plugin.
+	
+	%todo inserire immagine di portfolio
+	
+	After installing portfolio and creating plans for my mock up projects, I have chosen to install Service Desk, to complete the configuration of the Jira instance.
+	As earlier I have followed the documentation on Jira's website.
+	
+	As described in ... this piece of software is used to communicate with the clients and having a portal from which a client can find information and request assistance with a product.
+	The first thing I tested after installing this software was creating a portal and see from the point of view of a client how this can be able to open an issue and what type of issues he may have access to.
+	
+	%todo inserire immagine Service Desk
+	
+	Not long after I have installed Confluence, and like Jira, I have used it's embedded database.
+	
+	--------------------------------------
+	
+	understanding what an issue is, what a project is, how a project is different than a product, understanding what a workflow is and how it applies to different projects
+	
+	Installation of Service desk.
+	
+	Installation of Confluence, using H2 database.
+	
+	
+	Interconnecting Jira and Confluence.
+	Creating a first knowledge base.
+	
+	
+	first requirement change, using gitlab
+	connecting gitlab
+	utilizzare gitlab (con account personale su server aziendale e progettini di mock) per effettuare transizioni automatiche delle issue (spiegare correlazione tra progetti in gitlab e in jira)
+	
+	customizing the user interface while waiting for a meeting with the tutor
+	
+	
+	snapshotting the machine
+	parlare di milestone / baseline\\
+	
+	
+	
+	
+	% todo tenere per dopo, prima parlare di intallazione di Jira con db preinstallato
+	Before installing anything thought it was necessary to correctly set up a database.
+	This was discussed with the tutor and the IT department, which opted for the latest stable distribution of PostgreSQL.
+
+	Installing postgres wasn't written on the work plan but it was included in ... 
+	
+	%todo inserire logo postgresql
+	
+	The reason for it is because it's free and open source, besides, other members of the IT department have used it and are familiar with it.
+	
+	After installing PostgreSQL I was able to make a clean installation of Jira.
+	
+	
+
+
+
+
+
+
+
+
 	\subsection{First configuration}
 		interconnessione tra i tool
 	

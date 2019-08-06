@@ -103,6 +103,49 @@ It is structured in four main sections, each representing a period:
 	
 	Not long after I have installed Confluence, and like Jira, I have used it's embedded database.
 	
+	Both software run on the same system, and their services are offered on port 8080 and 8090 respectively for Jira and Confluence.
+	
+	At this point I connected the software together and I tested it out by creating a knowledge base for a Service Desk project and a documentation space for a Software project.
+	
+	Confluence was easier to get familiar with, so after creating some mock spaces related to the projects that were in Jira at the time, I moved on.
+	
+	At this point there was a change in the requirements that were given to me by the tutor.
+	Contrary to what he said, the IT department opted to use GitLab instead of BitBucket because the developer know it better and for their usage tier there is no billing.
+	So it's free.
+	
+	This meant that there would be a tool less that needed to be installed, but I had to understand how to link Jira's functionalities to those offered by GitLab.
+	
+	Connecting these tools together means that a developer can interact with Jira's issues in a project by typing it's ID in the messages that he uses for commits, comments, merge requests and so on.
+	
+	Fortunately GitLab's documentation had a dedicated page that allowed me to configure both tools.
+	
+	% https://docs.gitlab.com/ee/user/project/integrations/jira.html
+	
+	This functionality though allows GitLab to interact with Jira's default workflows.	
+	If the licence for GitLab's hosted version is not Premium (or Silver for the online one) there is no interaction from Jira to GitLab.
+	
+	% https://docs.gitlab.com/ee/integration/jira_development_panel.html
+	
+	There is no 1:1 project mapping from GitLab to Jira, a commit message in the repository may reference multiple Jira issues from different projects.
+	
+	Later ... I will talk about installing a plugin that allows these tools to be better connected.
+	
+	After understanding the potentiality of this connection I went on and set up a small demo that touched all the things that I have covered in the first two weeks of the internship.
+	The tutor wasn't available for a few days so I took the liberty to customize the environment by changing the colors and logos in the interface, putting Athonet's.
+	
+	% todo inserire immagine di interfaccia customizzata
+	
+	During the meeting I have taken with the tutor, he said that he liked the work I have done and that it was time for more elaborate mock projects in order to present the tools' functionalities to other company figures.
+	
+	After that I have deleted the mock projects from Jira and the related spaces in Confluence to ask the IT department for a snapshot of the VM I was working on.
+	
+	This allowed me to have a milestone / baseline.
+	A deliverable that I was able to use as a secure point in time in which I could go back if anything after went wrong.
+	
+\section{First realistic mock projects and feedback}
+	
+	FASE 2 PARLARE DI DIVERSE UTENZE E SICUREZZA
+	
 	--------------------------------------
 	
 	understanding what an issue is, what a project is, how a project is different than a product, understanding what a workflow is and how it applies to different projects

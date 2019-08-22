@@ -8,9 +8,9 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 
 This chapter is the core of this document and describes the way that this project has been implemented according to the work plan described in Chapter 2.
 
-It is structured in four main sections, each representing a period:
+It is structured in four main sections, each representing a time period:
 \begin{enumerate}
-	\item Learning stage
+	\item Learning stage - RIVEDERE NOME
 	\item Implementation
 	\item Testing
 	\item Feedback
@@ -29,42 +29,31 @@ It is structured in four main sections, each representing a period:
 		\includegraphics[width=1\textwidth]{resources/jira_documentation}\\
 		\caption{Screenshot of the Jira Documentation homepage from the Atlassian Support website}
 	\end{figure}
-	
-	This documentation is very easy to navigate because it versioned for each release, major and minor, of the software, plus it contains links to related pages.
-	
+	This documentation is very easy to navigate because it versioned for each release, major and minor, of the software, plus it contains links to related pages.	
 	If there is a reference about a Confluence webpage, this is added as a link.
-	Vice versa on the Confluence documentation, if there is a Jira reference, it links to the latter's documentation.
-	
+	Vice versa on the Confluence documentation, if there is a Jira reference, it links to the latter's documentation.	
 	Both Jira and Confluence have a bug reporting and issue tracking section in their documentation.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{resources/confluence_documentation_issues}\\
 		\caption{The issues related with Jira and Confluence are handled by a dedicated Jira Cloud instance}
 	\end{figure}
-	
-	If a webpage in the documentation is related to an issue, the latter is showed at the end of the page with its status and a link to its dedicated section.
-	
-	%todo rivedere parola userbase
+	If a webpage in the documentation is related to an issue, the latter is showed at the end of the page with its status and a link to its dedicated section. %todo rivedere parola userbase
 	The Confluence and Jira documentation are both written and hosted using Confluence, showing how powerful can be this tool for handling a wiki for such a complex software that has a large userbase.
-	
-	Confluence documentation is structured like Jira's, very easy to access and consult.
-	
+	Confluence's documentation is structured like Jira's, very easy to access and consult.	
 	Another bonus is that it is public and free to consult, despite the software is not.
 	This may seem like an obvious choice but not all vendors do it: RedHat for example let's you consult their documentation only if you log into the website.
 	
 \section{Initial installation and configuration}
 	
 	During the second week, while studying the documentation I went ahead and started configuring the software.
-
 	In order to install the Atlassian tools I was given a CentOS VM with 512GB of storage and 32GB of RAM.
 		
 	%todo logo centos
 	
 	To connect with the remote machine, which was in a controlled testing environment, I used Remmina, a remote desktop client for Linux operating systems.
 	This allowed me to easily connect to the machine to install software or to troubleshoot it in case of a failure.
-	
-	%todo rivedere ripetizioni
-	As for the documentation phase, the first software I installed was Jira, by following the official documentation.
+	As for the previous phase, the first software I installed was Jira, by following the official documentation.
 	%https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html
 	\begin{figure}[H]
 		\centering
@@ -73,7 +62,7 @@ It is structured in four main sections, each representing a period:
 	\end{figure}
 	
 	% todo aggiungere riferimento a paragrafo
-	As told in ... Jira requires a database to work properly.
+	As told in ...aggiungere riferimento... Jira requires a database to work properly.
 	For the first installation, which was made for testing purposes, the embedded H2 database was enough.
 	
 	%todo aggiungere immagine prima pagina di jira appena installato
@@ -87,28 +76,24 @@ It is structured in four main sections, each representing a period:
 	After understanding the fundamentals of this software and getting to know it's basic features, I went ahead and installed Portfolio.
 	
 	%todo aggiungere riferimento
-	This plugin, as told in ... helps visualizing the issues on a roadmap, which was one of the most important requirements.
+	This plugin, as told in ...aggiungere riferimento... helps visualizing the issues on a roadmap, which was one of the most important requirements.
 	
 	Installing Portfolio was easy, I just followed the instructions on the documentation to install the latest version of the plugin.
 	
 	%todo inserire immagine di portfolio
 	
-	After installing portfolio and creating plans for my mock up projects, I have chosen to install Service Desk, to complete the configuration of the Jira instance.
+	After installing Portfolio and creating plans for my mock up projects, I have chosen to install Service Desk, to complete the configuration of the Jira instance.
 	As earlier I have followed the documentation on Jira's website.
-	
-	As described in ... this piece of software is used to communicate with the clients and having a portal from which a client can find information and request assistance with a product.
+	As described in ...aggiungere riferimento... this piece of software is used to communicate with the clients and having a portal from which a client can find information and request assistance with a product.
 	The first thing I tested after installing this software was creating a portal and see from the point of view of a client how this can be able to open an issue and what type of issues he may have access to.
 	
 	%todo inserire immagine Service Desk
 	
 	Not long after I have installed Confluence, and like Jira, I have used it's embedded database.
-	
 	Both software run on the same system, and their services are offered on port 8080 and 8090 respectively for Jira and Confluence.
-	
-	At this point I connected the software together and I tested it out by creating a knowledge base for a Service Desk project and a documentation space for a Software project.
-	
+	Soon after I connected the software together and I tested it out by creating a knowledge base for a Service Desk project and a documentation space for a Software project.
 	Confluence was easier to get familiar with, so after creating some mock spaces related to the projects that were in Jira at the time, I moved on.
-	
+
 	At this point there was a change in the requirements that were given to me by the tutor.
 	Contrary to what he said, the IT department opted to use GitLab instead of BitBucket because the developer know it better and for their usage tier there is no billing.
 	So it's free.
@@ -128,10 +113,10 @@ It is structured in four main sections, each representing a period:
 	
 	There is no 1:1 project mapping from GitLab to Jira, a commit message in the repository may reference multiple Jira issues from different projects.
 	
-	Later ... I will talk about installing a plugin that allows these tools to be better connected.
+	Later ...aggiungere riferimento... I will talk about installing a plugin that allows these tools to be better connected.
 	
 	After understanding the potentiality of this connection I went on and set up a small demo that touched all the things that I have covered in the first two weeks of the internship.
-	The tutor wasn't available for a few days so I took the liberty to customize the environment by changing the colors and logos in the interface, putting Athonet's.
+	Since my tutor wasn't available for a few days so I took the liberty to customize the environment by changing the colors and logos in the interface, putting Athonet's.
 	
 	% todo inserire immagine di interfaccia customizzata
 	
@@ -143,6 +128,17 @@ It is structured in four main sections, each representing a period:
 	A deliverable that I was able to use as a secure point in time in which I could go back if anything after went wrong.
 	
 \section{First realistic mock projects and feedback}
+	
+	The fourth week of the internship I was ready to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.
+	
+	The objective was to have a working demo that could be shown to various members of Athonet for them to understand how these software can be used in their departments.
+	
+	In Jira I have created the projects:
+	\begin{itemize}
+		\item EPC
+		\item EPC Support
+		\item EPC Managment
+	\end{itemize}
 	
 	FASE 2 PARLARE DI DIVERSE UTENZE E SICUREZZA
 	

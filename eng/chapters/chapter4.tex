@@ -149,110 +149,37 @@ It is structured in four main sections, each representing a time period:
 	
 	Every group had various permissions; that allowed me to demonstrate how basic security works in these tools.
 	
+	As I told the progress that I have made to the tutor, he was able to set a meeting with him, the verification manager and the developer manager.
+	
+	For this I prepared some slides to explain some of the nomenclature in Jira and the various things that I have implemented.
+	
+	The core of this meeting was a discussion between the managers that verted on understanding how the various projects could be implemented in such a way that the employees would not be forced to use a strict Agile methodology, but to accomodate them and let them understand how these tools work.
+	
+	This also meant that there would be a custom workflow that had to be implemented and the managers were happy to see that it could be easily done, as for customizing the issue creation and modification menu.
 	
 	
-	--------------------------------------
+	They were also happy about the Internal wiki project because it meant that there could be one single tool for both internal documentation regarding clients and general notes for employees (like for example a guide on how to install Docker without loosing internet connectivity).
 	
-	understanding what an issue is, what a project is, how a project is different than a product, understanding what a workflow is and how it applies to different projects
+	After this meeting, I was put on standby because of the internal discussions that had to be done in order for the managers to understand how to adapt the workflow they had in Redmine for Jira and how to include Confluence in the mix.
 	
-	Installation of Service desk.
+	This was not considered when writing the plan of work document, but to carry on with the work I decided to start writing the documentation about installing and configuring the software, aimed for the administrators.
 	
-	Installation of Confluence, using H2 database.
+	In the sixth week, after this was done I showed it to the tutor and after his approval I started working on the user guide, which was written in the wiki Confluence space.
+	This meant that in order for the users to understand how to use the tools, they had to start using the tools and search in them the "how to"s.
 	
+	Later on a new meeting was scheduled with the product owner, who wanted to understand better how Portfolio works and how the concept of product matches the project denomination in Jira.
+	For him one of the most important things was to see how releases are mapped inside the software, since Redmine did not offer an intuitive interface and did not allow to see them on a timeline and applying filters.
 	
-	Interconnecting Jira and Confluence.
-	Creating a first knowledge base.
+	I showed him the progress I have made and he approved it, also he said that he wanted the credentials to start using it and see how to map the ongoing projects in Redmine to new ones in Jira or how to migrate them.
 	
+%	todo: spiegare che in questo periodo ho implementato un workflow che permette ad una issue di essere createa in service desk e che da li passa in business e che va in software, importante capire a quale release si riferisce
 	
-	first requirement change, using gitlab
-	connecting gitlab
-	utilizzare gitlab (con account personale su server aziendale e progettini di mock) per effettuare transizioni automatiche delle issue (spiegare correlazione tra progetti in gitlab e in jira)
+	The next week I had another meeting with more company figures: a senior developer, the business strategy manage, the managers that I have talked to in previous meetings, the CTO and my tutor.
+	As in the other meetings I have explained the various software that I have installed, the purpose for each one of them and the evolution of an issue.
 	
-	customizing the user interface while waiting for a meeting with the tutor
+	Snapshot of the machine.
 	
-	
-	snapshotting the machine
-	parlare di milestone / baseline\\
-	
-	
-	
-	
-	% todo tenere per dopo, prima parlare di intallazione di Jira con db preinstallato
-	Before installing anything thought it was necessary to correctly set up a database.
-	This was discussed with the tutor and the IT department, which opted for the latest stable distribution of PostgreSQL.
-
-	Installing postgres wasn't written on the work plan but it was included in ... 
-	
-	%todo inserire logo postgresql
-	
-	The reason for it is because it's free and open source, besides, other members of the IT department have used it and are familiar with it.
-	
-	After installing PostgreSQL I was able to make a clean installation of Jira.
-	
-	
-
-
-
-
-
-
-
-
-	\subsection{First configuration}
-		interconnessione tra i tool
-	
-	\subsection{Understanding the products}
-		creazione di progetti di mock\\
-		interconnetterli\\
-		capire il workflow delle issue\\
-		utilizzare gitlab (con account personale su server aziendale e progettini di mock) per effettuare transizioni automatiche delle issue (spiegare correlazione tra progetti in gitlab e in jira)
-
-	\subsection{Requirements change}
-		non usare bitbucket ma gitlab\\
-		visto il grosso ammontare di elementi customizzabili è stato necessario scremare le cose e capire cosa si poteva facilmente aggiungere e cosa lasciare per dopo\\
-		abbellimento dell'environment
-		
-		%todo logo dei due prodotti
-
-	\subsection{Customizing the user interface}
-		a causa della poca disponibilità in questo primo periodo di marco e paolo che utilizzeranno questo tool in maniera intensiva rispetto al tutor, ho fatto un task secondario come quello della personalizzazione dell'interfaccia grafica
-	
-		%todo immagini interfaccia grafica prima e dopo
-	
-	\subsection{snapshot della macchina per salvare il lavoro svolto per ora}
-		parlare di milestone / baseline\\
-		come le ho pensate nel piano di lavoro
-
-\section{First realistic mock projects and feedback}
-
-	This phase corresponds to ... in the work plan
-
-	\subsection{The projects}
-		idee del tutor\\
-		prime demo con lui per capire se questo tool effettivamente copre le necessità di base dell'azienda
-		
-	\subsection{Integrating with GitLab}
-		in questo periodo vista la scarista di opzioni di gitla nativo si è scelto di usare un plugin\\
-		(decontestualizzare il tempo, a posteriori, ragionando per milestone)\\
-		visto integrazione nativa\\
-		scelta di utilizzare un plugin\\
-		costa ma è migliore (descrivere da quale punto di vista)
-	
-	\subsection{First meetings to present the progress}
-		primo feedback e discussioni di come può evolvere il progetto e come può essere applicato ai loro workflow\\
-		riflessioni personali: a questo punto sto rispettando il piano di lavoro iniziale? sono in ritardo / anticipo?
-	
-	\subsection{New requirements change}
-		giustificare --> dopo fase di studio / riscontro\\
-		cosa può essere implementato subito, cosa no, come viene usato\\
-		campi e workflow custom\\
-		mapping tra processi jira e interni (sprint)
-	
-	\subsection{Documentation}
-		scrittura della bozza di documentazione e passaggio della documentazione in confluence
-		
-	\subsection{New snapshot of the machine}
-		nuova baseline / milestone
+	--------------------------------------	--------------------------------------	--------------------------------------
 
 \section{Transitioning to production}
 

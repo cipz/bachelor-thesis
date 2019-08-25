@@ -43,7 +43,8 @@
 {} % Si no, no modifica el tamaño
 } }
 
-\definecolor{unipd}{HTML}{b5121b}
+\definecolor{unipd}{HTML}{b20e10}
+\definecolor{unipd-grey}{HTML}{4c565c}
 
 % Inicio de portada
 \begin{titlepage}
@@ -98,7 +99,7 @@
 	\hspace{0pt}
 	% Franja negra con logotipo 
 	\begin{tikzpicture}[overlay, remember picture, inner sep=0pt, outer sep=0pt]
-	  \fill [black] (current page.south west) rectangle (\paperwidth,\paperheight-26.4cm);
+	  \fill [unipd-grey] (current page.south west) rectangle (\paperwidth,\paperheight-26.4cm);
 %	\node[anchor=south west,inner sep=0pt] at ($(current page.south west)+(14cm,1.6cm)$)
 %	              {\includegraphics[width=6.2cm]{\logoFacultadPortadaBaja}};
 	\end{tikzpicture}
@@ -107,15 +108,13 @@
 	\begin{textblock*}{\textwidth}(1cm,-2.3cm)% Ancho - Pos X,PosY
 		\noindent {\FuentePortada \fontsize{\TamTrabajo}{45pt}\selectfont\color{white}\tipotrabajo}
 		\\[\TamTrabajoIn] 
-		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white} Candidate:}
-		[\TamOtrosIn]
-		{\hspace{-1cm}\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white}\miNombre}
-		\\[\TamOtrosIn]		
+		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white} Candidate: Ciprian Stefan Voinea}
+		\\[\TamOtrosIn]
 		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white}\textbf{Matriculation number: 1143057}}
 		\\\\[\TamOtrosIn]
-		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white} Supervisor:}
-		[\TamOtrosIn]
-		{\hspace{-1cm}\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white}\miTutor}
+		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white} Supervisor: Armir Bujari}
+		\\[\TamOtrosIn]
+		{\hspace{-1cm}\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white}}
 		\\[\TamOtrosIn]
 		\\[\TamOtrosIn]		
 		{\FuentePortada \fontsize{\TamOtros}{30pt}\selectfont\color{white}\textbf{Accademic Year 2018 - 2019}}

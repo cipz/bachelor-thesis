@@ -57,11 +57,11 @@ The complexity and slowness in producing a concrete product in older SDLCs broug
 This chapter describes the most fundamental points of the Agile method, how it started and the adaptations that derived from it, like Scrum.
 At the end, it also explains how Athonet's adaptation of the Agile life cycle works.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{resources/Dilbert_Training_Agile_Programming}\\
-	\caption{Dilbert on Agile Programming}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=\textwidth]{resources/Dilbert_Training_Agile_Programming}\\
+%	\caption{Dilbert on Agile Programming}
+%\end{figure}
 
 %https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-developmentdls
 \section{Why the need for a new Software Life Cycle}
@@ -76,8 +76,8 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 %	https://hackr.io/blog/sdlc-methodologies
 	SDLC models can be of two types:
 	\begin{itemize}
-		\item Iterative: (like ..)
-		\item Incremental: (like .. )
+		\item \hl{Iterative: (like ..)}
+		\item \hl{Incremental: (like .. )}
 	\end{itemize}
 	
 	Two characteristic models used before Agile where the Sequential model (or Waterfall) and the Incremental model.
@@ -92,6 +92,13 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 	He was one of 17 software leaders that started meeting informally and talking about ways to develop software in a simpler way without the excess of documentation and other strict rules.
 
 	These talks led to the now famous Snowbird meeting (in Utah, February 2001), when the Agile Manifesto was written down and published.
+
+	%todo find higher res image from original dilbert website
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/BffFTn_CAAAEvGn}\\
+		\caption{\textit{Redmine}'s logo}
+	\end{figure}
 
 % https://agilemanifesto.org/
 %https://www.productplan.com/glossary/agile-manifesto/
@@ -178,7 +185,7 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 
 	It states that for the year 2018 (which marked their 13th annual report) the reasons for adopting Agile were productivity, improving team morale, reducing product risk (with a lesser percentage than the previous year) and about reducing project costs.
 
-	The most cited measures of success cited by the respondents are customer, or user, satisfaction and business value.
+	The measures of success mostly cited by the respondents were customer, or user, satisfaction and business value.
 
 	According to these companies, the benefits of adopting Agile are:
 	\begin{figure}[H]
@@ -196,6 +203,8 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 		\caption{The Waterfall and Prototype SDLC models}
 	\end{figure}
 
+	As we can see Jira is the second most recommended one.
+
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.8\textwidth]{resources/Untitled_4}\\
@@ -203,6 +212,7 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 	\end{figure}
 
 \section{Agile in practice}
+\hl{Briefly describe how some companies use Agile: Spotify / Netflix}
 
 % SPOTIFY
 %https://medium.com/@media_75624/exploring-key-elements-of-spotifys-agile-scaling-model-471d2a23d7ea
@@ -218,17 +228,46 @@ At the end, it also explains how Athonet's adaptation of the Agile life cycle wo
 %https://smartbear.com/blog/develop/5-lessons-agile-teams-can-learn-from-netflix/
 %http://www.agileadvice.com/2018/03/02/profiles/a-case-study-of-netflixs-high-performance-culture/
 
-LSD (Lean Software Development)
-This methodology is an adaptation of the Toyota lean manufacturing principles to software development. It was introduced in 2009 by Marry and Tom Poppendieck in their book "Lean Software Development: An Agile Toolkit."
+%LSD (Lean Software Development)
+%This methodology is an adaptation of the Toyota lean manufacturing principles to software development. It was introduced in 2009 by Marry and Tom Poppendieck in their book "Lean Software Development: An Agile Toolkit."
 
+%http://www.ambysoft.com/essays/agileRoles.html
+\section{The roles in Agile}
+\hl{Briefly describe the most important roles in Agile}
 
 %https://www.inc.com/adam-fridman/the-massive-downside-of-agile-software-development.html
 %https://leankit.com/learn/agile/what-are-the-disadvantages-of-agile/
 \section{Disadvantages of Agile Software Development}
-	l'agile può andare a completamente sostituire il resto\\
-	cosa ne pensano gli utenti
+	
+	Despite the benefits offered by the Agile model, transition a company's way of working to it is not that easy and if done wrong it may make damage instead of good.
 
+	%todo spiegare
+%	https://www.inc.com/adam-fridman/the-massive-downside-of-agile-software-development.html
+	\hl{According to the American entrepreneur Adam Fridman, here are the drawbacks of Agile:}
+	\begin{enumerate}
+		\item Less predictability
+		\item More time and commitment
+		\item Greater demands on developers and clients
+		\item Lack of necessary documentation
+		\item Project easily falls off track
+	\end{enumerate}
+	\hl{Briefly explain the points}
+	
 \section{What Agile variant will Athonet use}
-	misto a causa dei pochi dipendenti che hanno ancora una responsabilità ampia all'interno dell'azienda ma pensano che si possa incorporare agile\\
-	processi di business
+
+	As many small companies, Athonet will not strictly use one Agile implementation.
+	This is due also because of the nature of their product that is not released in simple software patches but it presents itself in a more monolithic version.
+	
+	After a search for the available software development tools on the market, they chose to try Atlassian's Jira in tandem with Confluence.
+	
+	%todo aggiungere riferimento
+	As I will say in Chapter 5, the managers liked the idea of Kanban because it allows the employees to come in the morning and choose what they want to work on from the backlog without giving them a two week period of time but letting them complete the tasks in time for the following release.
+	
+	But they also liked the idea of having a tool that could transition from a type of project to another in case they want to start applying stricter rules in the future.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/Dilbert_Training_Agile_Programming}\\
+		\caption{The Waterfall and Prototype SDLC models}
+	\end{figure}
 

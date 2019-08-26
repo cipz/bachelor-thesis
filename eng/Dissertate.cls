@@ -22,6 +22,11 @@
 \usepackage[automake, indexonlyfirst, numberline]{glossaries}
 \usepackage{graphicx}
 
+% Package used to highlight
+\usepackage{soul}
+
+\DeclareRobustCommand{\hlcyan}[1]{{\sethlcolor{cyan}\hl{#1}}}
+
 % Line spacing: dsingle/ddouble
 %   Whether to use single- or doublespacing.
 \newtoggle{DissertateSingleSpace}
@@ -305,6 +310,8 @@
 	\@mastername
 
 	\setstretch{2.5}
+	
+	\vspace{.5cm}
 
 	\vspace{30pt}
 	\scshape{\Huge{\bfseries{\textcolor{SchoolColor}{\thetitle}}}} \normalsize \\
@@ -313,7 +320,7 @@
 	
 	\setstretch{1.2}
 
-	\vspace{2.9cm}
+	\vspace{1.3cm}
 
 	\vfill
 	\begin{normalsize}
@@ -321,6 +328,10 @@
 	  \textit{Supervisor} \hfill \textit{Candidate}\\
 	  \vspace{1pt}
 	  \textbf{\@advisor} \hfill \textbf{\@author}\\
+  	  \vspace{1pt}
+  	  \textit{} \hfill \textit{Student ID}\\
+  	  \vspace{.5pt}
+	  \textbf{} \hfill \textbf{1143057}\\
 %	  Università di Padova \\
 %	  \vspace{6pt}
 %	  \textit{Co-supervisor} \\

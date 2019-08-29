@@ -70,6 +70,7 @@
 \section{Initial installation and configuration}
 	
 	%todo frase introduttoria
+	\hl{INTRODUCTION}
 	
 	As for the previous phase, the first software I installed was Jira, by following the official documentation.
 	%https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html
@@ -170,14 +171,14 @@
 	
 \section{First realistic mock projects and feedback}
 	
-	The fourth week of the internship I was ready to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.
-	The objective was to have a working demo that could be shown to various members of Athonet for them to understand how these software can be used in their departments.
+	\hl{The fourth week of the internship I was ready to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.}
+	The objective was to finalize the working demo that could be shown to various members of Athonet for them to understand how these software can be used in their departments.
 
-	In Jira I have created the projects EPC and Dashboard, both Software projects, while in Confluence I have created the spaces EPC Documentation and Dashboard Documentation.
+	In Jira I have created the projects EPC and Dashboard, both Software, while in Confluence I have created the spaces EPC Documentation and Dashboard Documentation.
 	Also in Jira I have created an Athonet Internal Wiki project, to show how Service Desk could be useful for sharing internal documents between employees.
 	
 	For the first project I have implemented a more articulate workflow that resembles the realistic evolution of an issue inside the company and customized the menus that allow the creation of an issue.
-	Later these will be revised because in this stage I did not have the information about what an issue requires to have in Athonet's case. 
+	Later these will be revised because in this stage I was not given the information about what an issue requires to have in Athonet's case. 
 	
 	As I continued working on the mock projects and creating issues, I noted down all the most important customization that an administrative user can use to set up the software, not only for Athonet's specific purposes but in general.
 	
@@ -188,16 +189,19 @@
 		\item Developers
 	\end{itemize}
 	
-	Every group had various permissions; that allowed me to demonstrate how basic security works in these tools.
+	Every group had various permissions; that allowed me to demonstrate how basic security rules work in these tools.
 	
-	As I told the progress that I have made to the tutor, he was able to set a meeting with him, the verification manager and the developer manager.
+	As I told the progress that I have made to the tutor, he was able to set me a meeting with himself, the verification manager and the developer manager.
 	
-	For this I prepared some slides to explain some of the nomenclature in Jira and the various things that I have implemented.
+	%todo aggiungere riferimento
+	I then prepared some slides to explain some of the nomenclature in Jira, as explained in ..., and the various things that I have implemented.
 	
-	The core of this meeting was a discussion between the managers that verted on understanding how the various projects could be implemented in such a way that the employees would not be forced to use a strict Agile methodology, but to accomodate them and let them understand how these tools work.
+	The core of this meeting was a discussion between the managers focused on understanding how their ongoing projects could be implemented in such a way that the employees would not be forced to use a strict Agile methodology, but to accomodate them and let them understand how these tools work without creating chaos.
+	\hl{There was also a discussion about how to associate the time periods to what they do now.... SPRINTS, DELIVERABLES che non possono essere consegnati ogni 2 settimane perchè il loro prodotto non è di quel tipo}
 	
-	This also meant that there would be a custom workflow that had to be implemented and the managers were happy to see that it could be easily done, as for customizing the issue creation and modification menu.
+	\hl{PARLARE DELLA BOARD, DI BACKLOG E DI MODI PER MISURARE LA PRODUTTIVITA}
 	
+	This also meant there would be a more particular workflow that had to be implemented and the managers were happy to see that it could be easily done, as for customizing the issue creation and modification menu.
 	
 	They were also happy about the Internal wiki project because it meant that there could be one single tool for both internal documentation regarding clients and general notes for employees (like for example a guide on how to install Docker without loosing internet connectivity).
 	
@@ -208,57 +212,62 @@
 	In the sixth week, after this was done I showed it to the tutor and after his approval I started working on the user guide, which was written in the wiki Confluence space.
 	This meant that in order for the users to understand how to use the tools, they had to start using the tools and search in them the "how to"s.
 	
-	Later on a new meeting was scheduled with the product owner, who wanted to understand better how Portfolio works and how the concept of product matches the project denomination in Jira.
-	For him one of the most important things was to see how releases are mapped inside the software, since Redmine did not offer an intuitive interface and did not allow to see them on a timeline and applying filters.
+	%todo ci sta veramente come parte? alla fine ok ho fatto ma non verrà mai usata come cosa
+%	There was an issue I noticed that would not allow unlicensed users, to enter the wiki.
+	
+	Later on, a new meeting was scheduled with the product owner, who wanted to understand better how Portfolio works and how the concept of product matches the project denomination in Jira.
+	
+	%todo citare
+	%https://harbott.com/whats-the-difference-between-a-product-and-a-project-aaacfc983340
+	Project and product sound similar and the two concepts are often confused with each other.
+	A project is a temporary endeavour, with a clear definition of what needs to be delivered and by when, it has a beginning and end date.
+	A product is designed to continually create value for customers by solving their problems.
+	
+	For the product owner, one of the most important things was to see how releases are mapped inside the software, since Redmine did not offer such an intuitive interface and did not allow to see them on a timeline and applying custom filters.
 	
 	I showed him the progress I have made and he approved it, also he said that he wanted the credentials to start using it and see how to map the ongoing projects in Redmine to new ones in Jira or how to migrate them.
 	
-%	todo: spiegare che in questo periodo ho implementato un workflow che permette ad una issue di essere createa in service desk e che da li passa in business e che va in software, importante capire a quale release si riferisce
+	\hl{After using it for a couple of days and talking with the other managers, I was given a more realistic way Athonet would use these tools.
+	Since they were not sure letting users access Service Desk directly, an employee would create an issue that would represent the customer request through service desk.
+	The customer request could be a new feature, a bug report, require support, etc.
+	This would then be picked up by a team that would bring it inside a Business type of project by creating a linked issue.
+	This project would have a particular workflow and contains the more high lever tasks like documentation, meeting notes, feature statuses, etc.
+	These shared notes and documents would be stored in Confluence, where there would be links to them.
+	After they have been approved for production another team would create a linked issue inside the software project.
+	This would most likely be divided in many sub-issues by the team leader and these would be visible by the developers.
+	Each developer could then pick an issue to work on and handle it as he wants by, for example, dividing it in smaller sub-issues.}
 	
 	The next week I had another meeting with more company figures: a senior developer, the business strategy manage, the managers that I have talked to in previous meetings, the CTO and my tutor.
 	As in the other meetings I have explained the various software that I have installed, the purpose for each one of them and the evolution of an issue.
 	
-	Snapshot of the machine.
-	
-	--------------------------------------	--------------------------------------	--------------------------------------
-
-\section{Transitioning to production}
-
-	This phase corresponds to ... in the work plan
-
-	After the approval for using the tools by other departments (R\&D) it's time to transition it / move it to production
-	
-	\subsection{Migrating data from Redmine}
-		tool automatico di migrazione
-		collegamento con redmine, lo fa in maniera automatica
-		e se va male? c'è sempre lo snapshot
-	
-	\subsection{First non mock projects}
-	
-	\subsection{Fine tuning of the final product}
-		interazione con le persone
-		in base alle necessità degli utenti e di come lo usano faccio minime modifiche in produzione
-		miglioramento della documentazione
-	
-	\subsection{How are these tools being used}
-		è veramente agile? 
-		è un dialetto?
-		è un misto?
-		perchè athonet lo sta usando in questo modo?
+	Again, to have a milestone, I have requested a snapshot of the machine by the IT department.
+	Even with the requirements changes I was on schedule with the Gantt diagram and the other planning.
 
 \section{Final feedback and what else could be implemented in the future}
 
-	This phase corresponds to ... in the work plan
-
-	\subsection{Final feedback from the users}
-		feedback da parte del tutor
-		
-		feedback da responsabile strategia aziendale (gl)
-		feedback da responsabile del prodotto (aka product ownner / hesham)
-		feedback da responsabile sviluppo + testing
-			
-		feedback da parte di tutti gli utenti
+	This phase corresponds to the last ... in the work plan.
 	
-	\subsection{What Athonet plans to do with these new tools}
-		arrivare ad utilizzare agile in maniera rigida?
-		continuare a fare misto?
+	feedback da parte del tutor
+	
+	feedback da responsabile strategia aziendale (gl)
+	feedback da responsabile del prodotto (aka product ownner / hesham)
+	feedback da responsabile sviluppo + testing
+	
+	feedback da parte di tutti gli utenti
+
+\section{How are these tools being used}
+
+	Athonet does not want to pursue being an Agile software developing company in the near future, but it wants the tools that allow to organize their projects such that if one day their strategy varies, then the software would follow along.
+
+	What they really want to use now is a hybrid between Scrum and Kanban: Scrumban.
+	
+	As in Kanban visualizing workflow, limiting work in process (WIP), and measuring productivity are prioritized.
+	
+	Scrumban removes the practice of limiting WIP by time (i.e. velocity and Sprint boundary) and replaces it by limiting WIP for each stage.
+	
+	Scrumban is based on having a continuous flow of work, which is what Athonet has for their products.
+	
+	%todo citare
+	%https://www.atlassian.com/agile/kanban/kanplan
+	In Jira this aproach is called kanplan.
+	

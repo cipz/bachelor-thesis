@@ -73,8 +73,8 @@
     {\endoldenumerate\end{spacing}}
 
 % Text layout.
-\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper, showframe]{geometry}
-%\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry}
+%\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper, showframe]{geometry}
+\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry}
 \usepackage{ragged2e}
 %\RaggedRight
 \RequirePackage{graphicx}
@@ -276,10 +276,10 @@
 	\cleardoublepage
 
 	% table listing - required if you have any tables
-	\addcontentsline{toc}{chapter}{List of tables}
-	\listoftables
-	\phantomsection
-	\cleardoublepage
+%	\addcontentsline{toc}{chapter}{List of tables}
+%	\listoftables
+%	\phantomsection
+%	\cleardoublepage
 
 	% \acronyms
 
@@ -398,6 +398,7 @@
 \newcommand{\sommario}{
 	\phantomsection
 	\chapter*{Sommario}
+	\addcontentsline{toc}{chapter}{Sommario}
 	\input{frontmatter/preface}
 }
 
@@ -430,3 +431,9 @@
 }
 
 \renewcommand{\glsnamefont}[1]{\uppercase{\bfseries #1}}
+\renewcommand{\gls}[1]{\textsc{#1}\textsubscript{G}}
+
+
+
+
+

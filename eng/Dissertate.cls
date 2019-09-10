@@ -13,6 +13,8 @@
 \ProvidesClass{Dissertate}[2014/03/25 v2.0 Dissertate Class]
 \LoadClass[12pt, twoside, openright, a4paper]{book}
 
+\usepackage[nokeyprefix]{refstyle}
+
 \newcommand{\Quote}[1]{``\textit{#1}''}
 
 %
@@ -318,7 +320,7 @@
 
 	\setstretch{2.5}
 	
-	\vspace{.5cm}
+	\vspace{.7cm}
 
 	\vspace{30pt}
 	\scshape{\Huge{\bfseries{\textcolor{SchoolColor}{\thetitle}}}} \normalsize \\
@@ -327,7 +329,7 @@
 	
 	\setstretch{1.2}
 
-	\vspace{1.3cm}
+	\vspace{1.5cm}
 
 	\vfill
 	\begin{normalsize}
@@ -344,7 +346,7 @@
 %	  \textit{Co-supervisor} \\
 %	  \@coadvisorOne \\
 %	  \@coadvisorOneUniversity
-	  \vspace{10pt}
+	  \vspace{.1cm}
 	\end{flushleft}
 	  \textbf{Accademic Year 2018 - 2019}
 	\end{normalsize}
@@ -398,7 +400,7 @@
 \newcommand{\sommario}{
 	\phantomsection
 	\chapter*{Sommario}
-	\addcontentsline{toc}{chapter}{Sommario}
+%	\addcontentsline{toc}{chapter}{Sommario}
 	\input{frontmatter/preface}
 }
 

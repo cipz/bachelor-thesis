@@ -1,242 +1,86 @@
 %!TEX root = ../thesis.tex
 \begin{savequote}[75mm]
-\hl{If a team couldn’t be fed with two pizzas, it was too big.}
-\qauthor{Jeff Bezos}
+	A goal without a plan is just a wish.
+%\qauthor{Quoteauthor Lastname}
 \end{savequote}
 
-% https://areomagazine.com/2019/04/10/agile-and-the-software-industrys-ideology-problem/ 
-%https://www.softwaretestinghelp.com/agile-manifesto/
-%http://www.ambysoft.com/essays/agileManifesto.html
-%https://www.smartsheet.com/comprehensive-guide-values-principles-agile-manifesto
+\chapter{The project}
+\label{chapter_2}
 
-\chapter{Agile Software Development}
+%\newthought{There's something to be said} for having a good opening line. Morbi commodo, ipsum sed pharetra gravida, orci  $x = 1/\alpha$ magna rhoncus neque, id pulvinar odio lorem non turpis \cite{Eigen1971, Knuth1968}. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros.
+%$$\zeta = \frac{1039}{\pi}$$
 
-Before getting into the implementation and adaptation of Jira and Confluence, let's back up a little and understand the concept of Agile, a Software Development Life Cycle (or SDLC) model.\\
-%todo rivedere per bene
-SDLCs did not emerge until the 1960s, they are considered to be the oldest formalization of framework.
-%The Space Shuttle program, which operationally launched in 1982, used information and processing technologies from the 1960s.
-%https://ase.in.tum.de/paid.globalse.org/paid1/courseDocs/Readings/SoftwareLifeCycle030398.pdf
-A SDLC refers to the ensemble of activities that compose a software project.\\
-It starts with the concepts of understanding the problem and the requirements and it ends with the retirement of the system (when there is no more maintenance) or with the cancellation of the project.\\
-Small projects (generally for a single person) have a simpler life cycle: find the problem and write a program to solve it: once the problem has been solved, the program can be deleted and forgotten.\\
-%todo or in larger problems / solved
-In larger projects, that require a team to be developed, there must be some explicit rules to set a higher quality of the software.\\
-As activities are assigned to different persons, it becomes critical that all participants share a common view of the execution of the project.
-A SDLC model is a framework providing the ordering and dependencies of life cycle activities, 
-%todo rivedere
-managing these can be a major impact for a successful project and its duration.\\
-For example, a change in requirements during implementation may invalidate a substantial amount of work and delay the delivery of the system by several months.
-Different life cycle models prescribe different actions to handle such changes.\\
-%https://en.wikipedia.org/wiki/Software_development_process
-%todo mettere tra virgolette
-There are many SDLCs like Waterfall, Prototyping, Iterative and Incremental Development, Spiral Development, Rapid Application Development, and Extreme Programming. (XP). 
-%todo modificare immagine
-%Font piccolo nell'immagine e nella didascalia. In principio, il font dovrebbe essere a grandezza costante sia nel testo che nelle immagini
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{resources/warterfall_prototype}\\
-	\caption{The Waterfall and Prototype SDLC models}
-\end{figure}
-%https://www.iso.org/obp/ui/#iso:std:iso-iec:tr:24774:ed-2:v1:en
-%todo citare https://www.iso.org/standard/53815.html !!
-As the word \Quote{model} suggests, each company may have its own SDLC designed ad hoc for their internal use.\\
-This led to the creation of a standard that presents the guidelines for the elements that are most frequently used in describing a process: the title, purpose, outcomes, activities, task and information item.
-%todo citare
-The ISO/IEC TR 24774:2010: Systems and software engineering -- Life cycle management -- Guidelines for process description.\\
-The complexity and slowness in producing a concrete product in older SDLCs brought the need for a faster and more communicative model.\\
-%https://www.tutorialspoint.com/sdlc/sdlc_agile_model.htm
-%todo mettere a glossario
-%Agile SDLC model is a combination of iterative and incremental process models with focus on process adaptability and customer satisfaction by rapidly and continuously deliver of working software product.
-This chapter describes the most fundamental points of the Agile method, how it started and the adaptations that derived from it, like Scrum.
-At the end, it also explains how Athonet's adaptation of the Agile life cycle works.
-%todo trovare un'altra immagine
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{resources/Dilbert_Training_Agile_Programming}\\
-	\caption{Dilbert on Agile Programming}
-\end{figure}
+% For an example of a full page figure, see Fig.~\ref{fig:myFullPageFigure}.
 
-%https://techbeacon.com/app-dev-testing/agility-beyond-history-legacy-agile-developmentdls
-\section{The need for a new Software Life Cycle}
-	The decade of 1990 represented a very important turning point for the digital industry.
-	Computers were spreading everywhere and the software companies faced the so-called application development crisis.\\
-	%todo citare sito
-	The problem was that businesses moved too fast and within the space of three years, requirements, systems, and even entire businesses were likely to change. 
-	It meant that a lot of software ended up being incomplete or canceled halfway and the ones that made it through, even if they fulfilled the original objectives of the client, may not meet all the business needs.
-%	https://hackr.io/blog/sdlc-methodologies
-	SDLC models can be of two types:
+This chapter contains the results of the discussions and planning that have been made prior to the beginning of the internship.
+These contents are described in more detail in the \Quote{Piano di Lavoro} (work plan in English), a document that contains an estimation of resources for each task that composes the project.\\
+At the beginning of May I met with the tutor to understand the needs of the company and draft a plan.
+Below I describe how a resolution for the problem was first thought.
+
+\section{The company's needs}
+	%todo Forse io scriverei il paragrafo al contrario: ci sono questi needs, e attualmente i software si comportano cosi'. 
+	At the time of writing it has nearly 40 employees and it is expected to hire new people soon.\\
+	Athonet uses multiple software tools for keeping track of projects, sharing information internally and with the clients, visualizing product roadmaps, etc.\\
+	The most important tools they are currently relying on are:
 	\begin{itemize}
-		\item \hl{Iterative: (aggiungere spiegazione..)}
-		\item \hl{Incremental: (aggiungere spiegazione .. )}
+		\item Redmine\cite{redmine} as an Issue Tracking System
+		\item SharePoint\cite{sharepoint} as a collaborative platform
+		\item Planner\cite{planner} for visualizing project roadmaps
+		\item GitLab\cite{gitlab} as a repository
 	\end{itemize}
-	Two characteristic models used before Agile where the Sequential model (or Waterfall) and the Incremental model.\\
-	%todo completare
-	\hl{The pros / cons of waterfall were ... \\
-	The pros / cons of the incremental model where ...}\\
-	The excessive documentation, the forceful binding to the unchangeable decisions made early in the project and the little communication with the client brought to the need of a new model that prioritizes the product and the stakeholders over bureaucracy.\\
-	Those things frustrated people like Jon Kern, an aerospace engineer in the 1990s that with other figures from different industries "were looking for something that was more timely and responsive", as he noted.
-	He was one of 17 software leaders that started meeting informally and talking about ways to develop software in a simpler way without the excess of documentation and other strict rules.\\
-	These talks led to the now famous Snowbird meeting (in Utah, February 2001), when the Agile Manifesto was written down and published.
-	%todo find higher res image from original dilbert website
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[width=\textwidth]{resources/BffFTn_CAAAEvGn}\\
-%		\caption{\textit{Redmine}'s logo}
-%	\end{figure}
+	While some of these packages are compatible, others were not developed to be used together, although there are plugins that allow to interconnect them.
+	These don't allow much customization since they are programmed by third party developers and not always the compatibility is up to date with the latest releases.\\	
+	There is a need then to provide employees with a suite of stable tools that are easily interconnected and with a vast and well done documentation.
+	Also, these tools must be easy to maintain and update, since they don't have to become obsolete and outdated.\\
+	Nobody likes legacy systems.
+%	todo rivedere caption
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{resources/legacy-code}\\
+		\caption[Dilbert, \Quote{Plan A}]{Dilbert, \Quote{Plan A}, Monday June 06, 2011}
+	\end{figure}
+	Internal changes may not be directly visible to the clients, but the effect of having a much organized company, where there is always track of the work done and in progress ensures that when there is a request from the client it does not go unseen or unanswered.\\
+	Forcing employees to use a software instead of another one though is not easy without creating chaos.
+	This is why a good and easy to consult documentation is the key on helping employees transition.
 
-% https://agilemanifesto.org/
-%https://www.productplan.com/glossary/agile-manifesto/
-\section{The Agile manifesto}
-	%todo inserire riferimento
-	The Agile Manifesto is a brief document built on four foundational values and twelve supporting principles for Agile software development.\\
-	%todo citare manifesto
-	The four values are:
+\section{Requirements and objectives}
+	The final objective was to create a suitable and working environment that would be ready to transfer it into production and explain the users how to use it.\\
+	Requirements can be divided in three categories based on their relevance:
 	\begin{itemize}
-		\item \textbf{Individuals and interactions} over processes and tools
-		\item \textbf{Working software} over comprehensive documentation
-		\item \textbf{Customer collaboration} over contract negotiation
-		\item \textbf{Responding to change} over following a plan
+		\item Mandatory (\Quote{Obbligatorio} in italian): that have to be implemented, represent the core of the project;
+		\item Desirable (\Quote{Desiderabile} in italian): not mandatory for the final objective but add greater value;
+		\item Optional (\Quote{Facoltativo} in italian): add value to the project but not as much as the previous ones, carried out only if there is time left for them.
 	\end{itemize}
-	The responsiveness of people and embracing the importance of changes are the fundamentals of Agile.
-	Although documentation is secondary, it's important to note that Agile streamlines documentation and does not eliminate it.\\
-	%todo citare manifesto
-	These twelve principles emphasize things like “early and continuous delivery of valuable software” and “continuous attention to technical excellence”, and are: 
-	\begin{enumerate}
-		\item Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
-		\item Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.
-		\item Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
-		\item Business people and developers must work together daily throughout the project.	
-		\item Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
-		\item The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
-		\item Working software is the primary measure of progress.
-		\item Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.	
-		\item Continuous attention to technical excellence and good design enhances agility.
-		\item Simplicity--the art of maximizing the amount of work not done--is essential.
-		\item The best architectures, requirements, and designs emerge from self-organizing teams.
-		\item At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
-	\end{enumerate}
-	All of them are important but, in my opinion, the ones that add the most value to the Agile line of thought and that differentiate it from the other methods are 2, 4 and 6: they represent the intent of placing the product and the customer above everything else, allowing the use of small informal meetings (even if the decisions should be recorded) and the easy change of requirements because the client is always involved, even as an end user (tester).\\
-	%https://medium.com/hygger-io/4-values-of-the-agile-manifesto-and-12-agile-principles-easily-explained-84cd429f69f
-	Each Agile methodology applies the four values in different ways.
-	However, all of them rely on these values to guide the development and delivery of high-quality, working software.
-
-\section{Agile's little big cousins}
-	While Agile's manifesto contains values and principles, these are not prescriptive.
-	In fact the manifesto does not outline specific processes, procedures or best practices.
-	The goal is not to develop a rigid framework but rather create a mindset for software development.
-	Agile is a blanket term that describes a set of software development principles.\\
-	%	https://explore.versionone.com/state-of-agile
-	There are many methodologies that derive from Agile's thinking, the most famous ones, according to the annual survey from VersionOne's team are:
-	\begin{itemize}
-		\item Scrum
-		\item Scrumban
-		\item Kanban
-		\item Extreme Programming (XP)
-	\end{itemize}
-	The essence of Scrum is being agile (fast): a small team that is highly flexible and adaptive.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.8\textwidth]{resources/agile-usage-chart}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-
-	%todo modificare immagine
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\textwidth]{resources/trends}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-	This survey is quite interesting because it provides information from small and big real companies that want to share their experience.
-	A very important fact to be noted is that although Technology companies are the ones that mostly participated to the survey, there are other industries that use Agile and are interested in sharing their experience.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.8\textwidth]{resources/Untitled_2}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-	It states that for the year 2018 (which marked their 13th annual report) the reasons for adopting Agile were productivity, improving team morale, reducing product risk (with a lesser percentage than the previous year) and about reducing project costs.\\
-	The measures of success mostly cited by the respondents were customer, or user, satisfaction and business value.\\
-
-	%todo Qui devi elencare, e mettere un link alla figura con le percentuali. Il testo dovrebbe contenere tutte le informazioni necessarie per capire il tuo discorso, e le figure servono come chiarimento. Ciascuna figura dovrebbe essere indipendente, nel senso che tra immagine e didascalia si dovrebbe riuscire a capire tutto. 
-
-	According to these companies, the benefits of adopting Agile are:
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.8\textwidth]{resources/Untitled}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-
-	Also the questionnaire contained a question about what are the recommended Agile project management tools.
+	Each requirement has a unique ID that is composed by the first letter of their importance (from the italian word to resemble the \Quote{Piano di Lavoro}) and an increasing number.\\
+	A detailed list of requirements that describe more accurately the ones included in the original planning document can be found in \ref{AppendixB}.
 	
-	%todo modificare immagine
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.8\textwidth]{resources/Screenshot}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-
-	As we can see Jira is the second most recommended one.
-
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.8\textwidth]{resources/Untitled_4}\\
-		\caption{The Waterfall and Prototype SDLC models}
-	\end{figure}
-
-\section{Agile in practice}
-\hl{Briefly describe how some companies use Agile: Spotify / Netflix / Amazon}
-
-% SPOTIFY
-%https://medium.com/@media_75624/exploring-key-elements-of-spotifys-agile-scaling-model-471d2a23d7ea
-%https://medium.com/productmanagement101/spotify-squad-framework-part-i-8f74bcfcd761
-
-% AMAZON
-%https://www.forbes.com/sites/stevedenning/2019/06/02/how-amazon-became-agile/
-
-% MICROSOFT
-%https://www.forbes.com/sites/stevedenning/2015/10/27/surprise-microsoft-is-agile/
-
-% NETFLIX
-%https://smartbear.com/blog/develop/5-lessons-agile-teams-can-learn-from-netflix/
-%http://www.agileadvice.com/2018/03/02/profiles/a-case-study-of-netflixs-high-performance-culture/
-
-%LSD (Lean Software Development)
-%This methodology is an adaptation of the Toyota lean manufacturing principles to software development. It was introduced in 2009 by Marry and Tom Poppendieck in their book "Lean Software Development: An Agile Toolkit."
-
-%http://www.ambysoft.com/essays/agileRoles.html
-\section{The roles in Agile}
-\hl{Briefly describe the most important roles in Agile}
-
-%http://www.ambysoft.com/essays/agileRoles.html
-\section{Time periods and deliverables}
-\hl{Briefly describe the most important time periods in Agile}
-
-%https://www.inc.com/adam-fridman/the-massive-downside-of-agile-software-development.html
-%https://leankit.com/learn/agile/what-are-the-disadvantages-of-agile/
-\section{Disadvantages of Agile Software Development}
-	Despite the benefits offered by the Agile model, transition a company's way of working to it is not that easy and if done wrong it may make damage instead of good.
-	%todo spiegare
-%	https://www.inc.com/adam-fridman/the-massive-downside-of-agile-software-development.html
-	\hl{According to the American entrepreneur Adam Fridman, here are the drawbacks of Agile:}
-	\begin{enumerate}
-		\item Less predictability
-		\item More time and commitment
-		\item Greater demands on developers and clients
-		\item Lack of necessary documentation
-		\item Project easily falls off track
-	\end{enumerate}
-	\hl{Briefly explain the points}
+%todo I dont like much the style here, it goes too much into personal considerations, intentions, feelings.. 
+\section{Time division and planning}
+	To formalize the time division of the project I have used a Gantt diagram and a table contains a realistic approximation of the hours spent per task.\\
+	The internship was planned for a duration of ten weeks and the project has been spread such that I could have time to understand the tools and use them to get acquainted.
+	This time period also includes the phases for getting feedback from users, fine tune the configuration, explain the tools to various members of the company and, in case of incidents, slack time.
+	The complete Gantt diagram can be found in \ref{gantt_1}.\\
+	I started to create a temporal sequence only after I well understood the requirements and got an idea about how Atlassian's software works, also I wanted to figure out the final objective and thinking how to achieve it.
+	As it can be seen in the Gantt diagram, there are some tasks that overlap in time: for example the Study of the Atlassian suite overlaps with Configuration of the environment tools.
+	This because the tasks may have something in common or one helps the achievement of the other.
+	While studying the requirements for the Atlassian software I decided I would also configure the host machine.\\
+	I have coarse grained planned four main time periods:
+	\begin{itemize}
+		\item Learning
+		\item Implementing
+		\item Testing \hl{and fine tuning}
+		\item Feedback
+	\end{itemize}
+	Each of these contain smaller tasks that involve studying the tools, installing and configuring them, etc.\\
+	As discussed with the tutor, meetings had to be considered so that I could explain the progress to him and other company figures that would eventually use the software.\\
+	As milestones I considered having a deliverable that could be easily transitioned from the development to the production environment, such as a script that installs and configures the software or a container.
+	By definition this must be versionable and with a well written changelog.
 	
-\section{What Agile variant will Athonet use}
-	As many small companies, Athonet will not strictly use one Agile implementation.
-	This is also due because of the nature of their product that is not released in simple software patches but it presents itself in a more monolithic version.
-	After a research for the available software development life-cycle tools on the market, they chose to try Atlassian's Jira in tandem with Confluence.\\
+%todo completare
+\section{Approaching the problem}
 	%todo aggiungere riferimento
-	As I will say in Chapter 5, the managers liked the idea of Kanban because it allows the employees to come in the morning and choose what they want to work on from the backlog without giving them a two week period of time but letting them complete the tasks in time for the following release.
-	But they also liked the idea of having a tool that could transition from a type of project to another in case they want to start applying stricter rules in the future.
-	%todo immagine doppia modificare
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[width=\textwidth]{resources/Dilbert_Training_Agile_Programming}\\
-%		\caption{The Waterfall and Prototype SDLC models}
-%	\end{figure}
+	To understand better the potentiality of the tools, I have thought of some main use cases that, according to the requirements in ..., could indicate the main figures that interact with the tools and how.
+	\hl{Write that I have thought of use chases and associate them to the requirement?}
 
+	
+	

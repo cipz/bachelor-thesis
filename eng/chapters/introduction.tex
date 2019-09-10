@@ -17,6 +17,11 @@
 %I have sperimented ... 
 %}
 
+%e' una per te?
+%
+%Indip. farei un testo introduttivo e non passarei direttamente alla 1.1.
+%Questo testo potrebbe essere anche l'abstract riformulato + infine una panoramica sintetica dei contenuti di questo capitolo.
+
 \hl{INTRODUCTION TO WHAT IS A WAY OF WORKING\\HOW IT IS APPLIED IN MODERN SOFTWARE DEVELOPMENT COMPANIES\\THE IMPORTANCE OF HAVING A GOOD WAY OF WORKING FOR A COMPANY IN ORDER TO BE PRODUCTIVE}
 
 \section{Premise}
@@ -24,44 +29,38 @@
 	It contains a description of the work that I have done and an introduction to Agile and Scrum software developing methodologies.\\
 	%todo togliere se non serve
 	%todo aggiungere footnote sito dilbert
-	To introduce or to describe some of the arguments I will be using some comic strips of Dilbert, a character invented by Scott Adams.
-	It satirically represents the problems that can be present in a small or big company of software development.
+	To \hl{introduce or to} describe some of the arguments I will be using some comic strips of Dilbert, a character invented by Scott Adams\cite{dilbert}.
+	It satirically represents the problems that can be present in any small or big IT company.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{resources/Dissertate}\\
 		\caption[Dilbert, \Quote{Plan A}]{Dilbert, \Quote{Plan A}, Monday June 06, 2011}
 	\end{figure}
-	The document contains a Glossary section that describes technical words that would need a more specific introduction: these are marked as \gls{Example}.\glsadd{Example}\\
+	The document contains a Glossary section that describes technical words that would need a more specific introduction: these are marked as \gls{Example}.\\
 	
 \section{The company}
-	Athonet is a telecommunication company headquartered nearby Vicenza.
+	Athonet\cite{athonet} is a telecommunication company headquartered nearby Vicenza\hl{, Italy}.
 	It stem from the idea that broadband networking should be easily available to people in rural areas and to companies that work in mission critical services or special environments like shipping, mining companies or even hospitals (safety critical).\\
-	%todo officially it started senza was?
-	%todo aggiungere footnote sito ericsson?
-	Officially it was started in 2004, although a working prototype of their idea was already developed by the CEO and CTO that were working alongside in Ericsson at that time.
-	%todo inserire citaizione Athonet.com
+	Officially it \hl{was} started in 2004, although a working prototype of their idea was already developed by the CEO (Chief Executive Officer) and CTO (Chief Technology Officer) that were working alongside in Ericsson\cite{ericsson} at that time.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\textwidth]{resources/ath_logo}\\
 		\caption[Athonet's logo]{Athonet's logo}
 	\end{figure}
 	Low latency communication, reliability and security are at the core of what Athonet provides.
-	%todo spiegare significato di LTE prima di introdurlo
 	Their main product is PriMo, a device that allows to create a dedicated core network, or enterprise LTE.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=.8\textwidth]{resources/gianluca_primo}\\
-		\caption{The CTO, \textit{Gianluca Verin}, with Athonet's main product \textbf{\Quote{PriMo}}\cite{gianluca_primo}}
+		\includegraphics[width=.5\textwidth]{resources/gianluca_primo}\\
+		\caption[]{Athonet's main product \textbf{\Quote{PriMo}}\cite{gianluca_primo}}
 	\end{figure}
+	The philosophy behind PriMo is that \Quote{the software is the network}, as Athonet was a pioneer in decoupling the software from the hardware, in order to have the solution running on different general purpose computing hardware, e.g., based on x86 processors.\\
 	In 2012, after a disastrous earthquake destroyed all the communication lines in Emilia Romagna, Athonet has reestablished connectivity, thus showing the how PriMo can be used on the field in emergency situations.\\
 	Athonet installed PriMo at the top of a school, allowing them to cover the affected area not only for the operators of Servizio Civile but for the citizens as well.\\
-	In December 2013, Athonet has been rewarded by Giorgio Napolitano, the then President of the Italian Republic, with a medal for merits for the sustainability in the digital sector.\\
+	In December 2013, Athonet has been rewarded by Giorgio Napolitano, the then President of the Italian Republic, with a medal for merits for the sustainability in the digital sector\cite{athonet_presidente}.\\
 	Lately they have migrated some of their functions to the cloud: by using AWS they have achieved a hybrid product, BubbleCloud, a plug and play solution that allows to locally deploy the physical Edge Nodes while managing them from the AWS cloud.\\
 	This small business has much to offer, considering that some of it's competitors are giants like Nokia and Ericsson.\\
-	As a proof of the continuous will to improve and for the solution it provides, Athonet has been awarded with four Global Mobile Awards at the GSMA Mobile World Congress, held in February 2019 in Barcelona.
-	%todo inserire citazioni
-%	https://www.millionaire.it/athonet-la-startup-italiana-che-trionfa-al-mobile-world-congress/#!
-%	http://www.ilgiornale.it/news/interni/genio-torna-svezia-soffrire-nella-sua-italia-912407.html
+	As a proof of the continuous will to improve and for the solution it provides, Athonet has been awarded with four Global Mobile Awards at the GSMA Mobile World Congress, held in February 2019 in Barcelona\cite{athonet_premi}.
 
 \section{The project}
 	It consists in installing and configuring two main software tools, Jira and Confluence, alongside plugins to add more functions and enhance their potentiality.
@@ -75,11 +74,11 @@
 \section{Document organization}
 	This thesis is organized as follows:
 	\begin{itemize}
-		\item Chapter 1 or \Quote{Introduction}: describes the overall content of this document
-		\item Chapter 2 or \Quote{The internship project}: describes in detail the objectives and planning of the internship project
-		\item Chapter 3 or \Quote{Agile processes and methodologies}: an introduction to the Agile software development
-		\item Chapter 4 or \Quote{Jira and Confluence: the essentials}: describes the most valuable functionalities of Jira and Confluence
-		\item Chapter 5 or \Quote{Project implementation}: details how the project has been implemented by dividing it into time periods
-		\item Chapter 6 or \Quote{Conclusions}: contains the retrospective of the project, future developments and personal considerations
+		\item \Chapref{introduction} or \Quote{Introduction}: describes the overall content of this document
+		\item \Chapref{chapter_2} or \Quote{The internship project}: describes in detail the objectives and planning of the internship project
+		\item \Chapref{chapter_3} Chapter 3 or \Quote{Agile processes and methodologies}: an introduction to the Agile software development
+		\item \Chapref{chapter_4} or \Quote{Jira and Confluence: the essentials}: describes the most valuable functionalities of Jira and Confluence
+		\item \Chapref{chapter_5} or \Quote{Project implementation}: details how the project has been implemented by dividing it into time periods
+		\item \Chapref{conclusions} or \Quote{Conclusions}: contains the retrospective of the project, future developments and personal considerations
 	\end{itemize}
 	

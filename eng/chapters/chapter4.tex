@@ -1,39 +1,32 @@
 %!TEX root = ../thesis.tex
 \begin{savequote}[75mm]
-Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo.
-\qauthor{Quoteauthor Lastname}
+In an agile project the team takes care of the tasks and the project leader takes care of the team.
+\qauthor{Jim Highsmith}
 \end{savequote}
 
-%La struttura tesi mi piace!
-%Domanda (la risposta aiuta anche per la presentazione): Avendo chiarito il contesto Agile, Jira e Confluence sn le unice risposte? 
-%Quel che intendo dire e' che nella parte di background tecnologico e' utile esporre vari approcci (hai fatto un studio di dominio) e un eventuale piccolo confronto (non indispensabile per una tesi 3-ennale) e poi concludi che questi strumenti sono stati scelti perche... anche semplicemente Imposti dal contesto aziendale.
-%
-%Pensaci.. non farei ora questa modifica - vediamo alla fine. Pero preparati un argomento simil. per la presentazione. Dimostra maturita'.
+% todo Domanda (la risposta aiuta anche per la presentazione): Avendo chiarito il contesto Agile, Jira e Confluence sn le unice risposte? 
+%todo Quel che intendo dire e' che nella parte di background tecnologico e' utile esporre vari approcci (hai fatto un studio di dominio) e un eventuale piccolo confronto (non indispensabile per una tesi 3-ennale) e poi concludi che questi strumenti sono stati scelti perche... anche semplicemente Imposti dal contesto aziendale.
+%todo Pensaci.. non farei ora questa modifica - vediamo alla fine. Pero preparati un argomento simil. per la presentazione. Dimostra maturita'.
 
 \chapter{Jira and Confluence: the essentials}
 \label{chapter_4}
-	
-	Now that we have understood the concept of Agile, let's get to know Jira and Confluence, the software chosen by Athonet to implement it. \gls{adt}
-	%todo aggiungere riferimento
+	Now that we have understood the concept of Agile and it's derivatives, let's get to know Jira and Confluence, the software chosen by Athonet to implement it.
 	These are proprietary tools developed and maintained by the Australian company Atlassian.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\textwidth]{resources/atlassian_logo}\\
 		\caption{The logos of \textit{Atlassian}, \textit{Jira}, \textit{Confluence} and \textit{Jira Service Desk}}
 	\end{figure}
-	%todo aggiungere a glossario
-	%todo aggiungere riferimento da dove go preso informazioni
 	Jira is an Issue Tracking System that was first released in 2002, it's name is a truncation of Gojira, the Japanese word for Godzilla.
 	This is a reference to another ITSs that was dominating the market at the time, Bugzilla.
-	% https://www.workzone.com/blog/jira-alternatives/
-	Now the competitors of Jira are other software like, for example, Redmine, VersionOne, PivotalTracker, Workzone or integrated ITSs in repositories like GitHub's or GitLab's issue trackers.\\
+	At the time of writing, the competitors of Jira are other software like, for example, Redmine, VersionOne, PivotalTracker, Workzone or integrated ITSs in repositories like GitHub's or GitLab's issue trackers\cite{jira-alternatives}.\\
 	Athonet's previous choice was Redmine because it's open source (this implies it's free of commision), it has a medium-large community of people that use it and maintain it behind and the plugins allow the integration with other tools used internally like repositories or, for example, software for reporting customer requests.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.6\textwidth]{resources/redmine_logo}\\
 		\caption{\textit{Redmine}'s logo}
 	\end{figure}
-	Confluence, on the other hand, is designed as a collaboration platform for sharing knowledge like documents, product specifications, meeting notes and can be used as a wiki for internal use or for releasing information to the clients.
+	Confluence, on the other hand, is designed as a collaboration platform for sharing knowledge like documents, product specifications, meeting notes and can be used as a wiki for internal use or for releasing information to the clients.\\
 	Atlassian released the first version of Confluence in 2004, saying its purpose was to build \Quote{an application that was built to the requirements of an enterprise knowledge management system, without losing the essential, powerful simplicity of the wiki in the process}\cite{theserverside}.\\
 	Since the first releases of these products, Atlassian has developed and acquired new tools like Bamboo, Clover, Crowd, Crucible, and FishEye, all orientated towards collaboration, content sharing, issue tracking, time scheduler, etc.\\
 	Both Jira and Confluence are written in Java.
@@ -45,7 +38,6 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 	Plugins can extend by far the usage and integration with other tools and the Atlassian Marketplace is full of them.
 	Although there is a license that has to be paid, if used correctly these tools can allow the company to save money that could be lost in badly managed resources like time, documentation and even people.\\
 	Let's understand them better.
-	
 	\subsection{Jira}
 		Over the past years Jira has become such an important software that Atlassian had to separate it in three specialized components, each with it's own scope.
 		Here is a table from Jira's official documentation that contains all the major differences:
@@ -54,74 +46,61 @@ Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin moles
 			\includegraphics[width=\textwidth]{resources/jira_type}\\
 			\caption{\textit{Redmine}'s logo}
 		\end{figure}
-		%todo citazione
-		\hl{I'll be describing some of the key features and purposes of each software, but a more in depth comparison can be found at:}
-		%http://www.akeles.com/what-are-the-differences-between-jira-software-jira-service-desk-and-jira-core/
-		
-		%\includegraphics[height=\fontcharht\font`\B]{resources/atlassian_logo} 
-		%todo aggiungere piccolo logo dei progetti vicino a ciascun titolo
+		The three editions of Jira have the same look and feel to provide a consistent project experience, but there are some differences that characterizes these standalone products\cite{what-are-the-differences}:
 		\subsubsection{Jira Core}
-			\hl{Jira Core's main purpose is to handle business processes.}
+			The core version is a business project management software thought for general team project collaborations and workflow approvals of not technical tasks that can eventually be related with developers' issues.
+			It's targeted users are non technical teams like\hl{, for example,} the business, legal, operations and marketing departments.
 			
 		\subsubsection{Jira Software}
-			\hl{Jira Software's main purpose is to ho handle software projects.}
+			It's purpose is to plan and track the trend of the project by managing releases and creating reports from real time data in order to improve the teams' performance.
+			Each project can have it's own workflow and can be integrated with other Atlassian tools for better \hl{coverage}.
 		
 		\subsubsection{Jira Service desk}
-			\hl{Jira Service desk's main purpose is to handle customer requests}
+			This software's main purpose is to handle customer requests and provide them with a user friendly help center, that, in combination with Confluence, can create a rich navigable knowledge base.
+			It can be integrated with Jira Software so IT and developer teams can collaborate on one platform.
 
-		%https://marketplace.atlassian.com/apps/1212136/portfolio-for-jira/version-history
 		\subsubsection{Jira Portfolio Plugin}
-			\hl{Jira Portfolio was first designed as a plugin from ... then it was acquired by atlassian becaues
-			It's main purpose is to visualize project roadmaps}
+			Portfolio is an add-on for Jira Software that enables teams to build plans and track progress.
+			It's main purpose is creating real time roadmaps that can include issues, 
 		
 	\subsection{Confluence}
 		As described earlier, Confluence is a collaboration platform.
-		\hl{It allows to create spaces of different categories that can be associated with Jira projects.\\SAY THAT THERE ARE MANY DIFFERENT SPACES + TELL DIFFERENCE}
-		
-%		EXAMPLES OF COMPANIES THAT USE JIRA AND CONFLUENCE 
-%		CANONICAL
-%		+ QUELLA CHE TI HA MANDATO FABIO
+		It allows to create spaces of different categories that can be associated with Jira projects.
+		There are many different space types (like knowledge base, documentation, software project, etc.) that contain templates used for creating documents.\\
+		Companies like Akraino have used Confluence to create public wikis for their customers\cite{akraino}.
 		
 \section{Key concepts for Jira}
-	Jira has it's own terminology that needs to be understood in order to completely master the software.	
-	%todo inserire citazione
-	%https://www.atlassian.com/software/jira/guides/getting-started/overview#key-terms-to-know
-	\hl{The key terms that must be known, according to ... are:}
+	Jira has it's own terminology that needs to be understood in order to completely master the software.\\
+	The key terms that must be known, according to Jira's guidelines\cite{key-terms-to-know} are:
 	\begin{itemize}
-		\item Issues: 
-		\item Projects: 
-		\item Workflows: 
+		\item \textbf{Issues}: a single work item of any type or size that is tracked from creation to completion
+		\item \textbf{Projects}: a collection of issues that are held in common by purpose or context
+		\item \textbf{Workflows}: represent the sequential path an issues takes from creation to completion
 	\end{itemize}
 	
 \section{How Athonet uses them}
-	
-	%Jira was also used in the past by some employees at their former company, so there was more familiarity compared to other tools
-
 	As I anticipated, Athonet has chosen Atlassian's Jira and Confluence because they need a single solution that is coherent and that could provide them a unique access for all the company figures to the projects and their related documentation.
-	
-	\hl{impossibile sostituire certi tool come word per la creazione di documenti per la condivizione con clienti / utenti}
-	
-	These tools are complex, it is necessary to understand the scenario they can be used in and how to transition from the old software.\\
+	Plus Jira was also used in the past by some employees at their former company, so there was more familiarity compared to other tools.\\
+	Although, it will be impossible to eliminate the use of Microsoft Office programs (Word, PowerPoint, Excel) to share documents, presentations and other content with clients.
+	This is because of their simplicity and massive use for producing documents in a fast and user friendly way.\\
+	These tools can become complex, it is necessary to understand the scenario they can be used in and how to transition from the old software.\\
 	It is important for the company to adapt the tools for it and not change their entire way of working to accommodate to the new software.
-
 	\subsection{Development} 
 		Compared to Redmine Jira has many more useful functionalities and on top of that it has a richer UI (User Interface).
 		The development team will be the one that will use it the most, and because of that it is important that it can integrate with GitLab.
-		%todo aggiungere nei riferimenti
-		%https://marketplace.atlassian.com/apps/1212989/gitlab-listener?hosting=server&tab=overview
-		With the GitLab Listener plugin Developers can interact with Jira's issues from the messages in the repository's operation.
+		With the GitLab Listener plugin\cite{gitlab-listener} Developers can interact with Jira's issues from the messages in the repository's operation.
 	
 	\subsection{Management} 
 		The most important feature the management department needed was the live roadmap.	
 		It's a key element for this kind of company since it allows to keep an eye the trend in development and manage the releases.
-		Jira's Portfolio allow to apply filters that can display a different granularity on what is shown, this means that it can be used at more levels in the company's hierarchy.
+		Jira's Portfolio allow to apply filters that can display a different granularity on what is shown, this means that it can be used at more levels in the company's hierarchy.\\
 		With the kind of tools currently in use it's not possible to have such a smooth integration.
 	
 	\subsection{Client interaction} 
 		Although Service Desk would be the ideal software to allow the interaction with clients, Athonet has not yet thought of using it in such a way, but there is the possibility to do so in the future.
 		
 	\subsection{Internal documentations}
-		\hl{Confluence substitutes the current multiple }
+		Confluence substitutes the multiple wiki software that were previously installed, allowing an integration with Jira and offering a richer experience for the employees.
 		
 	\subsection{The difference between these and other internal tool}
 		\hl{HOW ATLASSIAN'S SOFTWARE DIFFER FROM Sharepoint, otrs, office 365}

@@ -15,6 +15,8 @@
 
 \usepackage[nokeyprefix]{refstyle}
 
+\usepackage{tabularx}
+
 \newcommand{\Quote}[1]{``\textit{#1}''}
 
 %
@@ -174,6 +176,7 @@
 \renewcommand{\setthesection}{\arabic{chapter}.A\arabic{section}}
 
 % References.
+
 \renewcommand\bibname{References}
 %\RequirePackage[super,comma,numbers]{natbib}
 \RequirePackage[comma,numbers]{natbib}
@@ -182,6 +185,9 @@
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-0.5\baselineskip}}
 \renewcommand*{\chapterheadendvskip}{\vspace{1.3\baselineskip}}
 \bibliographystyle{IEEEtran}
+
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
 
 % An environment for paragraph-style section.
 \providecommand\newthought[1]{%

@@ -7,61 +7,52 @@
 \chapter{The project}
 \label{chapter_2}
 
-%\newthought{There's something to be said} for having a good opening line. Morbi commodo, ipsum sed pharetra gravida, orci  $x = 1/\alpha$ magna rhoncus neque, id pulvinar odio lorem non turpis \cite{Eigen1971, Knuth1968}. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros.
-%$$\zeta = \frac{1039}{\pi}$$
-
-% For an example of a full page figure, see Fig.~\ref{fig:myFullPageFigure}.
-
 This chapter contains the results of the discussions and planning that have been made prior to the beginning of the internship.
 These contents are described in more detail in the \Quote{Piano di Lavoro} (work plan in English), a document that contains an estimation of resources for each task that composes the project.\\
-At the beginning of May I met with the tutor to understand the needs of the company and draft a plan.
-Below I describe how a resolution for the problem was first thought.
+At the beginning of May there was a first meeting with the tutor to understand the needs of the company and draft a plan.
+Below follows a description about the project and how it was approached.
 
 \section{The company's needs}
-	%todo Forse io scriverei il paragrafo al contrario: ci sono questi needs, e attualmente i software si comportano cosi'. 
 	At the time of writing it has nearly 40 employees and it is expected to hire new people soon.\\
-	Athonet uses multiple software tools for keeping track of projects, sharing information internally and with the clients, visualizing product roadmaps, etc.\\
+	Athonet uses multiple software tools for keeping track of projects, sharing information internally and with the clients, visualizing \gls{product roadmaps}\glsadd{Roadmap}, etc.\\
 	The most important tools they are currently relying on are:
 	\begin{itemize}
-		\item Redmine\cite{redmine} as an Issue Tracking System
-		\item SharePoint\cite{sharepoint} as a collaborative platform
-		\item Planner\cite{planner} for visualizing project roadmaps
-		\item GitLab\cite{gitlab} as a repository
+		\item \Quote{Redmine}\cite{redmine} as an Issue Tracking System
+		\item \Quote{SharePoint}\cite{sharepoint} as a collaborative platform
+		\item \Quote{Planner}\cite{planner} for visualizing project roadmaps
+		\item \Quote{GitLab}\cite{gitlab} as a \gls{repository}\glsadd{Repository}
 	\end{itemize}
-	While some of these packages are compatible, others were not developed to be used together, although there are plugins that allow to interconnect them.
-	These don't allow much customization since they are programmed by third party developers and not always the compatibility is up to date with the latest releases.\\	
-	There is a need then to provide employees with a suite of stable tools that are easily interconnected and with a vast and well done documentation.
+	While some of these software packages are compatible, others were not developed to be used together, although there are plugins that allow to interconnect them.
+	These don't allow much customization since they are programmed by third party developers and not always the compatibility is up to date with the latest releases.\\
+	Consequently there is a need to provide employees with a suite of stable tools that are easily interconnected and with a vast and well done documentation.
 	Also, these tools must be easy to maintain and update, since they don't have to become obsolete and outdated.\\
 	Nobody likes legacy systems.
-%	todo rivedere caption
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{resources/legacy-code}\\
-		\caption[Dilbert, \Quote{Plan A}]{Dilbert, \Quote{Plan A}, Monday June 06, 2011}
+		\caption{Dilbert on legacy system infrastructures}
 	\end{figure}
-	Internal changes may not be directly visible to the clients, but the effect of having a much organized company, where there is always track of the work done and in progress ensures that when there is a request from the client it does not go unseen or unanswered.\\
-	Forcing employees to use a software instead of another one though is not easy without creating chaos.
-	This is why a good and easy to consult documentation is the key on helping employees transition.
+	Internal changes may not be directly visible to the clients, but the effect of having a more organized company, where there is always track of the work done and in progress, ensures that when there is a request from the client it does not go unseen or unanswered.\\
+	Although, forcing employees to use a software instead of another one is not easy without creating chaos.
+	This is why a good and available documentation is the key on helping employees transition from a tool to another.
 
 \section{Requirements and objectives}
 	The final objective was to create a suitable and working environment that would be ready to transfer it into production and explain the users how to use it.\\
 	Requirements can be divided in three categories based on their relevance:
 	\begin{itemize}
-		\item Mandatory (\Quote{Obbligatorio} in italian): that have to be implemented, represent the core of the project;
-		\item Desirable (\Quote{Desiderabile} in italian): not mandatory for the final objective but add greater value;
-		\item Optional (\Quote{Facoltativo} in italian): add value to the project but not as much as the previous ones, carried out only if there is time left for them.
+		\item Mandatory
+		\item Desirable
+		\item Optional
 	\end{itemize}
-	Each requirement has a unique ID that is composed by the first letter of their importance (from the italian word to resemble the \Quote{Piano di Lavoro}) and an increasing number.\\
 	A detailed list of requirements that describe more accurately the ones included in the original planning document can be found in \ref{AppendixB}.
 	
-%todo I dont like much the style here, it goes too much into personal considerations, intentions, feelings.. 
 \section{Time division and planning}
-	To formalize the time division of the project I have used a Gantt diagram and a table contains a realistic approximation of the hours spent per task.\\
-	The internship was planned for a duration of ten weeks and the project has been spread such that I could have time to understand the tools and use them to get acquainted.
+	The time division of the project has been visualized using a Gantt diagram, alongside a table that contains a realistic approximation of the hours spent per task.\\
+	The internship was planned for a duration of ten weeks and the project has been spread such that there would be enough time to understand the tools and use them to get acquainted and demo them to the other employees.
 	This time period also includes the phases for getting feedback from users, fine tune the configuration, explain the tools to various members of the company and, in case of incidents, slack time.
 	The complete Gantt diagram can be found in \ref{gantt_1}.\\
-	I started to create a temporal sequence only after I well understood the requirements and got an idea about how Atlassian's software works, also I wanted to figure out the final objective and thinking how to achieve it.
-	As it can be seen in the Gantt diagram, there are some tasks that overlap in time: for example the Study of the Atlassian suite overlaps with Configuration of the environment tools.
+	This temporal sequence has been draft only after understanding the requirements and getting an idea about how Atlassian's software works, also I wanted to perceive the final objective and think on how to achieve it.
+	As can be seen in the Gantt diagram, there are some tasks that overlap in time: for example the \Quote{Study of the Atlassian suite} overlaps with Configuration of the environment tools.
 	This because the tasks may have something in common or one helps the achievement of the other.
 	While studying the requirements for the Atlassian software I decided I would also configure the host machine.\\
 	I have coarse grained planned four main time periods:
@@ -72,15 +63,15 @@ Below I describe how a resolution for the problem was first thought.
 		\item Feedback
 	\end{itemize}
 	Each of these contain smaller tasks that involve studying the tools, installing and configuring them, etc.\\
-	As discussed with the tutor, meetings had to be considered so that I could explain the progress to him and other company figures that would eventually use the software.\\
-	As milestones I considered having a deliverable that could be easily transitioned from the development to the production environment, such as a script that installs and configures the software or a container.
+	As discussed with the tutor, meetings had to be considered so that the progress done could be explained to him and the other company figures that would eventually use the software.\\
+	As \gls{milestones}\glsadd{Milestone}, in agreement with the tutor, the deliverable that marks the progress of the work was a VM that represented the status of the system.
 	By definition this must be versionable and with a well written changelog.
 	
 %todo completare
 \section{Approaching the problem}
 	%todo aggiungere riferimento
-	To understand better the potentiality of the tools, I have thought of some main use cases that, according to the requirements in ..., could indicate the main figures that interact with the tools and how.
-	\hl{Write that I have thought of use cases and associate them to the requirement?}
+	\hl{To understand better the potentiality of the tools, I have thought of some main use cases that, according to the requirements in ..., could indicate the main figures that interact with the tools and how.
+	Write that I have thought of use cases and associate them to the requirement?}
 
 	
 	

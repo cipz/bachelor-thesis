@@ -4,64 +4,59 @@
 \label{AppendixB}
 
 \section{Notation}
-Si farà riferimento ai requisiti secondo le seguenti notazioni:
-\begin{itemize}
-	\item \textit{O} per i requisiti obbligatori, vincolanti in quanto obiettivo primario richiesto dal committente;
-	\item \textit{D} per i requisiti desiderabili, non vincolanti o strettamente necessari,
-	ma dal riconoscibile valore aggiunto;
-	\item \textit{F} per i requisiti facoltativi, rappresentanti valore aggiunto non strettamente 
-	competitivo.
-\end{itemize}
+	Requirements in this text are referenced as:
+	\begin{itemize}
+		\item \textit{O} (\Quote{Obbligatorio} in italian) for Mandatory: that have to be implemented, represent the core of the project
+		\item \textit{D} (Desiderabile in italian) for Desirable: not mandatory for the final objective but add greater value
+		\item \textit{F} (Facoltativi in italian) for Optional: add value to the project but not as much as the previous ones, carried out only if there is time left for them
+	\end{itemize}
+	Each requirement has a unique ID that is composed by the first letter of their importance (from the italian word to resemble the \Quote{Piano di Lavoro}) and an increasing number.
 
-Le sigle precedentemente indicate saranno seguite da una coppia sequenziale di numeri, identificativo del requisito.
-
+\newpage
 \section{Original project requirements}
-
-\subsection*{Obiettivi fissati}
-Si prevede lo svolgimento dei seguenti obiettivi:
-\begin{itemize}
-	\item Obbligatori
+	The requirements that have been agreed with the tutor and that are included in the Piano di Lavoro are:
 	\begin{itemize}
-		\item \underline{\textit{O01}}: tutti i software del nuovo sistema devono essere correttamente configurati;
-		\item \underline{\textit{O02}}: tutti i software del nuovo sistema devono essere in grado di comunicare tra loro;
-		\item \underline{\textit{O03}}: deve essere presente una documentazione chiara ed appropriata sia per chi utilizza il software sia per chi lo andrà a mantenere;
+		\item Mandatory
+		\begin{itemize}
+			\item \underline{\textit{O01}}: all the new software must be correctly configured
+			\item \underline{\textit{O02}}: Jira and Confluence must be fully interconnected
+			\item \underline{\textit{O03}}: it is required a clear and suitable documentation for both the users and the maintainers
+			\item \underline{\textit{O04}}: having a customizable interface for inserting issues
+		\end{itemize}
+		\item Desirable
+		\begin{itemize}
+			\item \underline{\textit{D01}}: integration with Microsoft Office
+			\item \underline{\textit{D02}}: create scripts that will interact with the software that compose the environment
+		\end{itemize}
+		\item Optional
+		\begin{itemize}
+			\item \underline{\textit{F01}}: migrate existing data from the old system to the new
+			\item \underline{\textit{F02}}: migrate the system to the production environment to replace (even gradually) the existing one
+		\end{itemize} 
 	\end{itemize}
-	
-	\item Desiderabili 
-	\begin{itemize}
-		\item \underline{\textit{D01}}: possibilità di integrazione con la suite di prodotti Microsoft Office;
-		\item \underline{\textit{D02}}: possibilità di effettuare personalizzazioni tramite l'utilizzo di script che andranno ad interagire con i software che compongono il sistema;
-	\end{itemize}
-	
-	\item Facoltativi
-	\begin{itemize}
-		\item \underline{\textit{F01}}: possibilità di migrazione dei dati relativi a profetti già in produzione sul nuovo sistema;
-		\item \underline{\textit{F02}}: possibilità di trasportare il sistema in ambiente di produzione rimpiazzando (anche in maniera graduale) quello già esistente;
-	\end{itemize} 
-\end{itemize}
 
+\newpage
 \section{Revised project requirements}
-
-\subsection*{Obiettivi fissati}
-Si prevede lo svolgimento dei seguenti obiettivi:
-\begin{itemize}
-	\item Obbligatori
+	Here is a list of the requirements that have been revised during the internship period:
 	\begin{itemize}
-		\item \underline{\textit{O01}}: tutti i software del nuovo sistema devono essere correttamente configurati;
-		\item \underline{\textit{O02}}: tutti i software del nuovo sistema devono essere in grado di comunicare tra loro;
-		\item \underline{\textit{O03}}: deve essere presente una documentazione chiara ed appropriata sia per chi utilizza il software sia per chi lo andrà a mantenere;
+		\item Mandatory
+		\begin{itemize}
+			\item \underline{\textit{O01}}: all the new software must be correctly configured
+			\item \underline{\textit{O02}}: Jira and Confluence must be fully interconnected
+			\item \underline{\textit{O03}}: it is required a clear and suitable documentation for both the users and the maintainers
+			\item \underline{\textit{O04}}: the new system must be able to connect with the repository hosted in GitLab
+			\item \underline{\textit{O05}}: there must be a live product roadmap that can be available for various members of the company
+		\end{itemize}
+		\item Desirable
+		\begin{itemize}
+			\item \underline{\textit{D01}}: integration with Microsoft Office
+			\item \underline{\textit{D02}}: create scripts that will interact with the software that compose the environment
+			\item \underline{\textit{D03}}: customize the interface with the logo and the colors of the company
+		\end{itemize}
+		\item Optional
+		\begin{itemize}
+			\item \underline{\textit{F01}}: migrate existing data from the old system to the new
+			\item \underline{\textit{F02}}: migrate the system to the production environment to replace (even gradually) the existing one
+			\item \underline{\textit{F03}}: create templates for documents in Confluence
+		\end{itemize} 
 	\end{itemize}
-	
-	\item Desiderabili 
-	\begin{itemize}
-		\item \underline{\textit{D01}}: possibilità di integrazione con la suite di prodotti Microsoft Office;
-		\item \underline{\textit{D02}}: possibilità di effettuare personalizzazioni tramite l'utilizzo di script che andranno ad interagire con i software che compongono il sistema;
-	\end{itemize}
-	
-	\item Facoltativi
-	\begin{itemize}
-		\item \underline{\textit{F01}}: possibilità di migrazione dei dati relativi a profetti già in produzione sul nuovo sistema;
-		\item \underline{\textit{F02}}: possibilità di trasportare il sistema in ambiente di produzione rimpiazzando (anche in maniera graduale) quello già esistente;
-	\end{itemize} 
-\end{itemize}
-

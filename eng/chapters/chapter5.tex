@@ -6,115 +6,90 @@
 	\qauthor{\href{https://twitter.com/mikeveerman}{@mikeveerman} on Twitter}
 \end{savequote}
 
-%Andando a vedere i contenuti di questa parte non mi soddisfano molto. Ce troppo scritto e poco di tecnico. Parla meglio un diagrama che 10 pagine di scritto.
-%Di solito, per queste tipologie di lavori, consiglio di seguire un approccio top-down. Espongo un diagramma (di qualsiasi natura) che racconta l'intera soluzione e blochi che la compongono e poi vado a parlarti di alcuni di questi blochi e come si incastrano. 
+%todo Andando a vedere i contenuti di questa parte non mi soddisfano molto. Ce troppo scritto e poco di tecnico. Parla meglio un diagrama che 10 pagine di scritto.
+%todo Di solito, per queste tipologie di lavori, consiglio di seguire un approccio top-down. Espongo un diagramma (di qualsiasi natura) che racconta l'intera soluzione e blochi che la compongono e poi vado a parlarti di alcuni di questi blochi e come si incastrano. 
 
 \chapter{Projet implementation}
 \label{chapter_5}
-
-	This chapter is the core of this document and describes the way that this project has been implemented according to the planning described in Chapter 2.\\
+	This chapter is the core of this document and describes the way that this project has been implemented according to the planning described in \Chapref{chapter_2}.\\
 	It is structured in four main sections that go over the main time periods presented in the Piano di lavoro document.\\
-	Since the scope of the project was to create a demo environment to show the capabilities of Jira, Athonet has bough ten user licenses for Jira Software, ten for Service Desk and ten for Confluence.\\
-	%todo inserire riferimento
-	%https://confluence.atlassian.com/cloud/compare-atlassian-cloud-vs-server-744721664.html
-	All these software have three installation options:
+	Since the scope of the project was to create a demo environment to show the capabilities of Jira, Athonet has bought ten user licenses for Jira Software, ten for Service Desk and ten for Confluence.\\
+	As described in Atlassian's documentation\cite{compare-atlassian-cloud-vs-server}, these tools have three installation options:
 	\begin{itemize}
-		\item Cloud: on their infrastructure
-		\item Server: download and install on a local network
-		\item Data Center: download and install for a large infrastructure
+		\item \textbf{Cloud}: hosted on their infrastructure
+		\item \textbf{Server}: download and install on a local network
+		\item \textbf{Data Center}: download and install for a large infrastructure
 	\end{itemize}
-	Because of Athonet's policies about storing their data in the cloud, they opted for an on premise Server installation.
-	This kind of installment requires a one time payment for the software while other subsequent fees will be for the support.
-
-	%todo togliere se non serve
-	\newpage
-
+	Because of Athonet's policies about storing internal data in the cloud, the IT department opted for an on premise, Server, installation.
+	This kind of installment requires a one time payment for the software while the subsequent fees will be for support.
 \section{Learning phase}
 	This phase corresponds to the first two weeks of the internship.
-	As described in the work plan in this first period the main task was to understand what the tools are and what they can do.\\
-	At first I have started to search information about Jira and Confluence on Google.
-	%todo aggiungere riferimento a official documentation
-	The first one I have started researching was Jira, and i found that the official documentation is very well organized.
+	As described in the \Quote{Piano di Lavoro}, the main task in this first period  was to understand what the tools are and what they can do.
+	The first important thing to do was to acquire knowledge on Jira and Confluence by researching them on the Internet.
+	The first one I have started researching was Jira, this brought me to the official documentation\cite{jira_docu}, which is very well organized.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\textwidth]{resources/jira_documentation}\\
-		\caption{Screenshot of the Jira Documentation homepage from the Atlassian Support website}
+		\caption[Screenshot from Jira's Documentation page]{Screenshot of the sections from Jira's Documentation homepage from the Atlassian Support website}
 	\end{figure}
 	It is very easy to navigate because it's versioned for each release, major and minor, of the software, plus it contains links to related pages, including Confluence's documentation and Atlassian's blog.
-	%todo questa frase fa schifo
-	%On Confluence's documentation, if there is a reference to Jira's, it links to the latter's documentation.	
-	%todo aggiungere riferimento
-	As said in ... both Jira and Confluence have a bug reporting and issue tracking section in their documentation.
+	As said in \ref{sec:atlassian_community} both Jira and Confluence have a bug reporting and issue tracking section in their documentation.
+	If a web page is related to an issue, this is showed at the end of the page with its status and a link to its dedicated section.\\
+	The Confluence and Jira documentation are both written and hosted using a Confluence instance, showing how powerful can be this tool for handling a wiki for such a complex software that has a large userbase.\\
+	Confluence's documentation is structured like Jira's, easy to access and consult, other than being public and free to read, despite the software are not.\\
+	The second half of the first week was dedicated to configuring the environment.
+	The IT department has chosen to create an instance of the Atlassian's software on a \gls{CentOS}\glsadd{CentOS} \gls{Virtual Machine}\glsadd{Virtual Machine} (VM) with 512GB of storage and 32GB of RAM, connected to a special testing network domain for internship students.
+	The \gls{Remmina}\glsadd{Remmina} was used to remotely connect to the given VM.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\textwidth]{resources/confluence_documentation_issues_1}\\
-		\caption{The issues related with Jira and Confluence are handled by a dedicated Jira Cloud instance}
+		\includegraphics[width=.5\textwidth]{resources/centos_logo}\\
+		\caption{Logo of the CentOS Linux distribution}
 	\end{figure}
-	If a web page in the documentation is related to an issue, this is showed at the end of the page with its status and a link to its dedicated section.\\
-	%todo rivedere ripetizioni
-	The Confluence and Jira documentation are both written and hosted using Confluence, showing how powerful can be this tool for handling a wiki for such a complex software that has a large userbase.\\
-	Confluence's documentation is structured like Jira's, very easy to access and consult.	
-	Another bonus is that it is public and free to read, despite the software is not.\\
-	%todo cercare un'azienda che ha la documentazione privata
-	%This may seem like an obvious choice for Atlassian, but not all vendors do it: RedHat for example let's you consult their documentation only if you log into the website.
-	During the second half of the first week I went ahead and started configuring the environment.
-	%todo spiegare acronimi
-	%todo aggiungere a glossario centos
-	In order to install the Atlassian tools I was given a CentOS VM with 512GB of storage and 32GB of RAM, connected to a special testing network environment for internship students.
-	%todo aggiungere a glossario remmina
-	To connect with the remote machine I used Remmina, a remote desktop client for Linux OSs.
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.6\textwidth]{resources/centos_logo}\\
-		\caption{The issues related with Jira and Confluence are handled by a dedicated Jira Cloud instance}
-	\end{figure}
-	
 	
 \section{Initial installation and configuration}	
-	Since the documentation I found was very exhaustive, I decided to anticipate the installation phase so that I could have a more hands on approach.
-	%todo rivedere frase
-	I started to look on this more practical part from the second half of the second week and, although in the Gantt diagram it overlaps with the previous task, it's because it involves some study as well.\\
-	%todo inserire citazione
-	%https://confluence.atlassian.com/adminjiraserver/installing-jira-applications-on-linux-938846841.html
-	As for the previous phase, I started by installing Jira following the official documentation.
+
+	Since the exhaustiveness of the documentation, the installation phase was anticipated so that there could be a more hands on approach.
+	As for the previous phase, the installation of Jira was done by following the dedicated article on the official documentation\cite{installing-jira-applications-on-linux}.	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\textwidth]{resources/jira_installation}\\
-		\caption{The issues related with Jira and Confluence are handled by a dedicated Jira Cloud instance}
+		\includegraphics[width=.9\textwidth]{resources/jira_installation}\\
+		\caption{Screenshot from the installation page of Jira in Atlassian's documentation}
 	\end{figure}
-	% todo aggiungere riferimento a paragrafo
-	Jira needs a database in order to store all the information regarding projects, users, etc.
-	For the first installation, used for testing purposes, the embedded H2 database was enough.
-	%todo aggiungere a glossario h2 database 
-	%todo aggiungere riferimento a documentazione
-	%https://confluence.atlassian.com/jirakb/accessing-jira-s-h2-embedded-database-776818136.html
-	It's important to note that the documentation says the H2 database is not suitable for production environments.
-	%todo aggiungere immagine prima pagina di jira appena installato
-	The first thing that I have done after the installation was getting acquainted with the interface and understanding how Jira's components interconnect with each other as I read in the documentation.\\
-	To do this I have created some mock projects and filled them with issues; it's here that I understood the concept of Board in Jira.\\
-	Boards and workflows are very tied in notions.
-	Experimenting with workflows was one of the most important things to do, because these are fundamental in an issue tracking system's configuration and are strictly connected to Boards.
-	
-	% todo inserire immagine di board
-	
-	After understanding the fundamentals of this software and getting to know it's basic features, I went ahead and installed Portfolio.
-	%todo aggiungere riferimento
-	This plugin, as told in ... helps visualizing the issues on a roadmap, which was one of the most important requirements.\\
-	%todo aggiungere riferimento a requisito
-	Installing Portfolio was easy, I just followed the instructions on the documentation to download the latest version of the plugin and embed it to Jira.
-	
-	%todo inserire immagine di portfolio
-	
-	After installing this plugin and creating plans for my mock up projects, I have chosen to install Service Desk, to complete the configuration of my Jira instance.
-	%todo inserire \cite a website
-	As earlier I have followed the documentation on the website.
-	%todo aggiungere riferimento
-	%todo aggiungere portal a glossario
-	As described in ... this piece of software is used to communicate with the clients and having a portal from which a client can find information and request assistance with a product.
-	The first thing I tested after installing this software was creating a help center and see from the point of view of a client how this can be able to open an issue and what type of issues he may have access to.
-	
-	%todo inserire immagine Service Desk
-	
+	To store all the information regarding projects, users, etc., Jira needs a database.
+	For the first installation, intended to be used in a testing manner, the embedded \gls{H2 database}\glsadd{H2 database} was enough.
+	It's important to note that the documentation says the H2 database is not suitable for production environments\cite{accessing-jira-s-h2-embedded-database}.
+	The first thing done after the installation was getting acquainted with the interface and understanding ho Jira's components interconnect with each other.\\
+	In order to do this it was necessary creating some mock projects and filling them with issues.
+	Here is where the concept of Board come out in Jira.\\
+	Boards and workflows are very tied notions.
+	Experimenting with workflows was one of the most important things to do, because these are fundamental in an Issue Tracking System's configuration and are strictly connected to Boards.
+	\begin{figure}[H]
+		\centering
+		\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{resources/Annotation2019-07-24171359}}%
+		\caption{Kanban board from a Jira project}
+	\end{figure}
+	Installing Portfolio was the step that came after understanding the fundamentals of Jira and getting to know its basic features.
+	This plugin, as told in \ref{subsec:portfolio} helps visualizing the issues on a roadmap, which was one of the most important requirements: \textit{O05}.\\
+	As per the previous installation, Portfolio's was done by downloading and embedding the binary into Jira's instance.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/portfolio}\\
+		\caption{Screenshot of Jira Portfolio from a mock project}
+	\end{figure}
+	After installing this plugin and creating plans for the previously created mock up projects, the next software installed was Jira Service Desk, to complete the configuration of the Jira instance.
+	As described in \ref{subsec:service_desk} this piece of software is mostly used to communicate with the clients and having a portal from which a user can find information and request assistance with a product.
+	In Jira Service Desk, the customer portal is the site where customers file and track requests.\\
+	After installing this software, the first thin to do was creating a \Quote{Help Center} to see from the client's point of view how it can be able to open an issue and what types he may have access to.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/Annotation2019-07-24170249}\\
+		\caption{A Jira Service Desk portal}
+	\end{figure}
+
+
+
+
+
 	%TODO CHE SENSO HA QUESTA FRASE
 	After I became familiar with Jira, I have installed Confluence, and like for the other software, I have used it's embedded database.
 	Both software run on the same system, and their services are offered on port 8080 and 8090 respectively for Jira and Confluence.\\

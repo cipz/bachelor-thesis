@@ -278,7 +278,7 @@
 	\clearpage
 
 	% figure listing - required if you have any figures
-	\addcontentsline{toc}{chapter}{List of figures}
+%	\addcontentsline{toc}{chapter}{List of figures}
 	\listoffigures
 	\phantomsection
 	\cleardoublepage
@@ -420,7 +420,7 @@
 \newcommand{\abstractpage}{
 	\phantomsection
 	\setcounter{page}{5}
-	\addcontentsline{toc}{chapter}{Abstract}
+%	\addcontentsline{toc}{chapter}{Abstract}
 	\chapter*{Abstract}
 	\input{frontmatter/abstract}
 }

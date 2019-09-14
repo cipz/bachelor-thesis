@@ -137,7 +137,7 @@ FUNCTION {default.name.latex.cmd}{ "" }
 
 
 % The default URL prefix.
-FUNCTION {default.name.url.prefix}{ "\\Available at: " }
+FUNCTION {default.name.url.prefix}{ "CIAO\\Available at: " }
 
 
 % Other controls that cannot be accessed via IEEEtranBSTCTL entry type.

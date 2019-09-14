@@ -6,9 +6,6 @@
 	\qauthor{\href{https://twitter.com/mikeveerman}{@mikeveerman} on Twitter}
 \end{savequote}
 
-%todo Andando a vedere i contenuti di questa parte non mi soddisfano molto. Ce troppo scritto e poco di tecnico. Parla meglio un diagrama che 10 pagine di scritto.
-%todo Di solito, per queste tipologie di lavori, consiglio di seguire un approccio top-down. Espongo un diagramma (di qualsiasi natura) che racconta l'intera soluzione e blochi che la compongono e poi vado a parlarti di alcuni di questi blochi e come si incastrano. 
-
 \chapter{Projet implementation}
 \label{chapter_5}
 	This chapter is the core of this document and describes the way that this project has been implemented according to the planning described in \Chapref{chapter_2}.\\
@@ -65,7 +62,7 @@
 	Experimenting with workflows was one of the most important things to do, because these are fundamental in an Issue Tracking System's configuration and are strictly connected to Boards.
 	\begin{figure}[H]
 		\centering
-		\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{resources/Annotation2019-07-24171359}}%
+		\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{resources/UntitledA}}%
 		\caption{Kanban board from a Jira project}
 	\end{figure}
 	Installing Portfolio was the step that came after understanding the fundamentals of Jira and getting to know its basic features.
@@ -74,7 +71,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth]{resources/portfolio}\\
-		\caption{Screenshot of Jira Portfolio from a mock project}
+		\caption[Screenshot of project in Jira Portfolio]{Screenshot of project in Jira Portfolio\cite{portfolio}}
 	\end{figure}
 	After installing this plugin and creating plans for the previously created mock up projects, the next software installed was Jira Service Desk, to complete the configuration of the Jira instance.
 	As described in \ref{subsec:service_desk} this piece of software is mostly used to communicate with the clients and having a portal from which a user can find information and request assistance with a product.
@@ -85,71 +82,64 @@
 		\includegraphics[width=\textwidth]{resources/Annotation2019-07-24170249}\\
 		\caption{A Jira Service Desk portal}
 	\end{figure}
-
-
-
-
-
-	%TODO CHE SENSO HA QUESTA FRASE
-	After I became familiar with Jira, I have installed Confluence, and like for the other software, I have used it's embedded database.
-	Both software run on the same system, and their services are offered on port 8080 and 8090 respectively for Jira and Confluence.\\
-	During installation I connected them together and tested the environment by creating a knowledge base for a Service Desk project and a documentation space for a Software project.\\
-	Confluence was easier to get familiar with, so after creating some mock spaces related to the projects that were in Jira at the time, I moved on.
-	%todo on either one of the instances
-	To ease the integration between these tools, Atlassian allows to have a single users table stored on either Jira or Confluence.\\
-	This was shown during the installation of Confluence as an option to link it with Jira's instance was presented, I inserted the administrative credentials and told it to use Jira's users.
-	%todo aggiungere a glossario tomcat (con immagine) e webserver
-	%todo aggiungere riferimento a http://tomcat.apache.org/
-	Jira and Confluence both use an Apache Tomcat web server.
-	To run them both on the same domain I had issues regarding the login.
-	Cookies for the users are stored for allowing them to access without inserting the password each time, but they didn't work correctly because the users were automatically logged out after some minutes.
-	This was because, when running on the same domain, even if on different ports, cookies from Jira and Confluence go in conflict.\\
-	%todo aggiungere riferimento
-	%https://confluence.atlassian.com/jirakb/how-to-change-the-jira-application-context-path-225119408.html
-	While seeking the Internet for answers, I found that many people new to these software gt into the same situation.
-	%todo inserire a glossario context path con riferimento da
-	%https://www.eclipse.org/jetty/documentation/9.4.x/configuring-contexts.html
-	To solve this issue all is necessary is to change the context path of the software's server.xml file that contains the configuration of the web-server.
-	An example of changing the context path for this project is:
+	The installation of Confluence came after understanding all the basics of Jira and becoming familiar with it.
+	For the newly installed software the H2 database was enough as for the previous one.
+	Both software run on the same system, and their services are offered on port 8080 and 8090 respectively for Jira and Confluence via HTTP protocol.\\
+	During the installation of Confluence, the install wizard program allowed me to insert all data of the Jira instance in order to connect them.
+	A knowledge base for the Service Desk project and a documentation space for the Software project have been generated in order to test the connection.\\
+	To allow a better integration between these tools, Atlassian allows to have a single database table containing the users information stored on either one of Jira or Confluence's instances.\\
+	This was shown during the installation of Confluence as an option to link it with Jira's instance was presented by asking for the administrative credentials for connecting to the database and using Jira's users.
+	Jira and Confluence both use the open source Apache Tomcat web server.
+	This particular web server has issues regarding the login when both software run on the same IP address: each program stores \gls{cookies}\glsadd{Cookie} to allow users to log in without inserting each time username and password.
+	On each log in though, users were automatically logged out of the system almost immediately.
+	After a research on the Internet I found a post\cite{user-is-constantly-logged-out-of-jira} in Atlassian's blog regarding this problem: the answer was that when run on the same IP address, cookies from Jira and Confluence go in conflict.
+	This post was associated with a more detailed issue\cite{JRASERVER-36960} in Jira's own portal.\\
+	The solution to this problem was to change the \gls{context path}\glsadd{Context Path} of both applications\cite{how-to-change-the-jira-application-context-path} in the \Quote{server.xml} file that contains the configuration of the web server.
+	An example of changing the context path is:
 	\begin{center}
 		\texttt{http://yourdomain.com:8080}
 	\end{center}
+	\vspace{-10pt}
 	becomes:
+	\vspace{-10pt}
 	\begin{center}
-		\texttt{http://yourdomain.com:8080/jira}
+		\texttt{http://yourdomain.com:8080\textbf{/jira}}
 	\end{center}
-	For Confluence, where the default port is 8090, the context path will become:
+	For Confluence, where the default port is 8090, the context path would become:
 	\begin{center}
-		\texttt{http://yourdomain.com:8090/confluence}
+		\texttt{http://yourdomain.com:8090\textbf{/confluence}}
 	\end{center}
-	At this point there was a change in the requirements that were given to me by the tutor.
-	Contrary to what he said in the beginning, the IT department opted to use GitLab instead of BitBucket because the developers know it better and there is no billing for their usage tier.	
-	%todo togliere?
-	So it's free.
-	
-	%todo mettere immagine logo gitlab
-	
-	This meant that there would be one less tool that needed to be installed, but I had to understand how to link Jira's functionalities to those offered by GitLab.\\
-	Connecting these tools together means that a developer can interact with Jira's issues in a project by typing it's ID in the messages that he uses for commits, comments, merge requests and so on.
-	Fortunately GitLab's documentation had a dedicated page with instruction examples and a guide that allowed me to configure both tools.\\
-	%todo citare
-	%https://docs.gitlab.com/ee/user/project/integrations/jira.html
+	Contrary to what was said in the beginning, the tutor had communicated me that the IT department opted to maintain for using GitLab\cite{gitlab} instead of installing BitBucket\cite{bitbucket}, another Atlassian software.	
+	This because GitLab was already in use by the developers, so they would not need to learn a new software that could affect their work routine.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.5\textwidth]{resources/glan}\\
+		\caption{GitLab Logo}
+	\end{figure}
+	Connecting these tools together means that a developer can interact with Jira's issues from a GitLab project by typing it's ID in the messages that he uses for commits, comments, merge requests and so on.
+	GitLab's documentation has a dedicated page with instructions, examples and a guide that allow configuring both tools\cite{integrations}.\\
 	This functionality allows GitLab to interact with Jira's default workflows, which sometimes are too simple for some software projects.\\
-	Since the license for GitLab's hosted version is not Premium (or Silver for the online one) there is no interaction the other way around, from Jira to the repository.
-	%todo citare
-	%https://docs.gitlab.com/ee/integration/jira_development_panel.html
-	Because these tools are not strictly related, there is no 1:1 project mapping from GitLab to Jira, a commit message in the repository may reference multiple Jira issues from different projects, so it's the programmer's discretion to comment wisely.
+	Since the license for GitLab's hosted version is not \Quote{Premium} (or \Quote{Silver} for the online one) there is no interaction the other way around, from Jira to the repository\cite{jira_development_panel}.
+	Since these tools are not strictly related, there is no direct project mapping from GitLab to Jira, a commit message in the repository may reference multiple Jira issues from different projects, so it's the programmer's discretion to comment wisely.
 	%todo aggiungere riferimento
-	Later ... I will talk about installing a plugin that allows these tools to be better connected.\\
-	After understanding the potentiality of this connection I went on and set up a small demo that touched all the things that I have covered in the first two weeks of the internship.
-	Since my tutor wasn't available for a few days so I took the liberty to customize the environment by changing the colors and logos in the interface, putting Athonet's.
-	
-	% todo inserire immagine di interfaccia customizzata
-	
-	When he came back during the meeting I have taken with him, he said that he liked the work I have done and that it was time for more elaborate mock projects in order to present the tools' functionalities to other company figures.\\
-	After that I have deleted the mock projects from Jira and the related spaces in Confluence to ask the IT department for a snapshot of the VM I was working on.\\	
-	%todo correggere se da altre parti c'è scritto milestone
-	This allowed me to have a baseline, a deliverable that I was able to use as a secure point in time in which I could go back if anything after went wrong.
+	\hl{Later ... I will talk about installing a plugin that allows these tools to be better connected.}\\
+	A demo that touched all the previously viewed arguments was set in place for showing the progress made to the tutor.	
+	Because his availability at the moment was very little, from the time the meeting was set to the actual moment of it happened, the interface of the system was customized by adding the colors of the company and its logo.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/jira_custom}\\
+		\caption{Custom menu interface for Jira}
+	\end{figure}
+	\vspace{-.5cm}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.85\textwidth]{resources/confluence_custom}\\
+		\caption{Custom menu interface for Confluence}
+	\end{figure}
+	During the meeting, the tutor liked the progress that was made and asked for more elaborate mock projects for presenting the tools' combined functionalities to other company figures.\\
+	The projects registered until that moment in Jira and their related spaces in Confluence were deleted and, as hinted in \ref{sec:time_planning}, a snapshot of the VM hosting the software was taken.\\
+	Until this point the completely fulfilled objectives were: \textit{O01}, \textit{O02}, \textit{O05}, \textit{D03}.\\
+	Although the connection between Jira and GitLab was established, to fulfill O04 it was required that GitLab supported custom workflows for Jira Software projects.
 	
 \section{First realistic mock projects and feedback}
 	The fourth week of the internship I was ready to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.

@@ -281,16 +281,10 @@
 	% figure listing - required if you have any figures
 %	\addcontentsline{toc}{chapter}{List of figures}
 	\listoffigures
-	\phantomsection
-	\cleardoublepage
-
-	% table listing - required if you have any tables
 %	\addcontentsline{toc}{chapter}{List of tables}
 %	\listoftables
-%	\phantomsection
-%	\cleardoublepage
-
-	% \acronyms
+	\phantomsection
+	\cleardoublepage
 
 	\cleardoublepage
 	\setcounter{page}{1}

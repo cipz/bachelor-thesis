@@ -136,9 +136,9 @@ FUNCTION {default.name.format.string}{ "{f.~}{vv~}{ll}{, jj}" }
 FUNCTION {default.name.latex.cmd}{ "" }
 
 
-% The default URL prefix and suffix.
-FUNCTION {default.name.url.prefix}{ "CIAO\\Available at:" }
-FUNCTION {default.name.url.suffix}{ "SUFFIX" }
+% The default URL prefix.
+FUNCTION {default.name.url.prefix}{ "\\Available at the following link:\\" }
+
 
 % Other controls that cannot be accessed via IEEEtranBSTCTL entry type.
 
@@ -300,7 +300,6 @@ ENTRY
     CTLname_format_string
     CTLname_latex_cmd
     CTLname_url_prefix
-    CTLname_url_suffix
   }
   {}
   { label }
@@ -347,8 +346,7 @@ STRINGS { bibinfo
           ALTinterwordstretchfactor
           name.format.string
           name.latex.cmd
-          name.url.prefix
-	  name.url.suffix}
+          name.url.prefix}
 
 
 
@@ -370,7 +368,6 @@ FUNCTION {initialize.controls}
   default.name.format.string 'name.format.string :=
   default.name.latex.cmd 'name.latex.cmd :=
   default.name.url.prefix 'name.url.prefix :=
-  default.name.url.suffix 'name.url.suffix :=
 }
 
 
@@ -1437,10 +1434,11 @@ FUNCTION {format.article.title}
 
 FUNCTION {format.article.title.electronic}
 { title duplicate$ empty$ 'skip$
-    { this.to.prev.status
-      this.status.std
-      cap.status.std
-      "t" change.case$ 
+    { %this.to.prev.status
+      %this.status.std
+      %cap.status.std
+      %"t" change.case$ 
+      emphasize
     }
   if$
   "title" bibinfo.check
@@ -1917,7 +1915,6 @@ FUNCTION {format.url}
         cap.yes 'status.cap :=
         name.url.prefix " " *
         "\url{" * url * "}" *
-	name.url.suffix " " *
         punct.no 'this.status.punct :=
         punct.period 'prev.status.punct :=
         space.normal 'this.status.space :=

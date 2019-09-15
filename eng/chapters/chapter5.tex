@@ -9,7 +9,7 @@
 \chapter{Projet implementation}
 \label{chapter_5}
 	This chapter is the core of this document and describes the way that this project has been implemented according to the planning described in \Chapref{chapter_2}.\\
-	It is structured in four main sections that go over the main time periods presented in the Piano di lavoro document.\\
+	It is structured in four main sections that go over the main time periods presented in the \Quote{Piano di Lavoro} document.\\
 	Since the scope of the project was to create a demo environment to show the capabilities of Jira, Athonet has bought ten user licenses for Jira Software, ten for Service Desk and ten for Confluence.\\
 	As described in Atlassian's documentation\cite{compare-atlassian-cloud-vs-server}, these tools have three installation options:
 	\begin{itemize}
@@ -71,11 +71,17 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\textwidth]{resources/portfolio}\\
-		\caption[Screenshot of project in Jira Portfolio]{Screenshot of project in Jira Portfolio\cite{portfolio}}
+		\caption[Screenshot of roadmap in a Jira Portfolio project]{Screenshot of roadmap in a Jira Portfolio project\cite{portfolio}}
 	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{resources/IPS}\\
+		\caption[Screenshot of releases in Jira Portfolio project]{Screenshot of releases in Jira Portfolio project\cite{portfolio}}
+	\end{figure}
+	The CTO of the company and PriMo's product owner were interested in the possibility of using a real time roadmap to keep track of the work done while not going as in deep as seeing the tasks assigned to each developer.\\
 	After installing this plugin and creating plans for the previously created mock up projects, the next software installed was Jira Service Desk, to complete the configuration of the Jira instance.
 	As described in \ref{subsec:service_desk} this piece of software is mostly used to communicate with the clients and having a portal from which a user can find information and request assistance with a product.
-	In Jira Service Desk, the customer portal is the site where customers file and track requests.\\
+	In Jira Service Desk, the customer portal is the site where customers file and track requests.
 	After installing this software, the first thin to do was creating a \Quote{Help Center} to see from the client's point of view how it can be able to open an issue and what types he may have access to.
 	\begin{figure}[H]
 		\centering
@@ -121,8 +127,7 @@
 	This functionality allows GitLab to interact with Jira's default workflows, which sometimes are too simple for some software projects.\\
 	Since the license for GitLab's hosted version is not \Quote{Premium} (or \Quote{Silver} for the online one) there is no interaction the other way around, from Jira to the repository\cite{jira_development_panel}.
 	Since these tools are not strictly related, there is no direct project mapping from GitLab to Jira, a commit message in the repository may reference multiple Jira issues from different projects, so it's the programmer's discretion to comment wisely.
-	%todo aggiungere riferimento
-	\hl{Later ... I will talk about installing a plugin that allows these tools to be better connected.}\\
+	Later in the text it's described the installation of a plugin that allows these tools to connect with more functionalities.\\
 	A demo that touched all the previously viewed arguments was set in place for showing the progress made to the tutor.	
 	Because his availability at the moment was very little, from the time the meeting was set to the actual moment of it happened, the interface of the system was customized by adding the colors of the company and its logo.
 	\begin{figure}[H]
@@ -142,108 +147,144 @@
 	Although the connection between Jira and GitLab was established, to fulfill O04 it was required that GitLab supported custom workflows for Jira Software projects.
 	
 \section{First realistic mock projects and feedback}
-	The fourth week of the internship I was ready to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.
-	The objective was to finalize the working demo that could be shown to various members of Athonet for them to understand how these software can be used in their departments.\\
-	In Jira I have created the projects EPC and Dashboard, both Software, while in Confluence I have created the spaces EPC Documentation and Dashboard Documentation.
-	Also in Jira I have created an Athonet Internal Wiki project, to show how Service Desk could be useful for sharing internal documents between employees.\\
-	For the first project I have implemented a more articulate workflow that resembles the realistic evolution of an issue inside the company and customized the menus that allow the creation of an issue.
-	
-	%todo inserire immagine workflow
-	
-	Later these will be revised because in this stage I was not given the information about what an issue requires to have in Athonet's case.\\	
-	As I continued working on the mock projects and creating issues, I noted down all the most important customization that an administrative user can use to set up the software, not only for Athonet's specific purposes but in general.\\	
-	To make the project more realistic I have created three user groups, besides the default ones, to which I have assigned three users each:
+
+	The previous paragraph marked the first three weeks of the internship.
+	Starting the fourth week the task was to implement more realistic projects in Jira, connecting them to Confluence providing them with documentation and creating a link with GitLab.
+	The objective was to expand the demo so that it could be shown to other members of Athonet to understand, both me and them, how these software can be used in their departments.\\
+	The new Software projects created in Jira were called \Quote{EPC} and \Quote{Dashboard}, linked to their documentation spaces in Confluence, respectively \Quote{EPC Documentation} and \Quote{Dashboard Documentation}.
+	To show the functionalities of Jira Service Desk as a knowledge base portal (sharing internal documents between employees), the \Quote{Athonet Internal Wiki} project was created.\\
+	For the first project a more articulate workflow has been implemented to resemble the realistic evolution of an issue inside the company.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\textwidth]{resources/Web+update+workflow}\\
+		\caption{Custom example workflow that can be implemented in a Jira project}
+	\end{figure}
+	While working on the mock projects and creating issues, it was useful to note down all the most important customization that an administrative user can use to set up the software, not only for Athonet's specific purposes but in general.\\		
+	To make the project more realistic three new user groups were created, besides the default ones, to which there were assigned three users each:
 	\begin{itemize}
 		\item Management
 		\item Verification
 		\item Developers
 	\end{itemize}
-	%todo va bene ;?
-	Every group had various permissions; this allowed me to demonstrate how basic security rules work in these tools.\\
-	After telling the progress I have made to the tutor, he was able to set me a meeting with himself and the verification and developer managers.
-	%todo aggiungere riferimento
-	I then prepared some slides to explain some of the nomenclature in Jira, as explained in ..., and the various things that I have implemented.\\
-	The core of this meeting was a discussion between the managers focused on understanding how their ongoing projects could be implemented in such a way that the employees would not be forced into using a strict Agile methodology, but to accommodate and let them understand how these tools work without creating chaos.\\
+	Every group had custom permissions allowing to demonstrate how basic security rules work in these tools (requirement \textit{D06}).\\
+	A first draft of how the menu for creating a new issue can be customized was done as well, although not final (requirement \textit{D05}). 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.9\textwidth]{resources/Annotation2019-07-24170502A}\\
+		\caption{Draft for custom issue creation and editing menu in Jira}
+	\end{figure}
+	After talking to the tutor about the made, he was able to set a meeting with himself, the verification and developer managers.
+	Slides were prepared in order to explain the nomenclature in Jira, described in this document in \ref{sec:concepts}, and the features that have been paired to the demo projects.\\
+	The core of this meeting was a discussion between the managers focused on understanding how their ongoing projects in Redmine could be implemented in such a way that the employees would not be forced into using a strict Agile methodology, but to accommodate and let them understand how these tools work without creating chaos.\\
 	There was a discussion on how applying a strict Agile methodology could impact their time division.
-	Agile provides sprints that by definition last two weeks.
-	These produce deliverables that bring added value to the project.
+	Agile provides sprints that by definition last two weeks, and these produce deliverables that bring added value to the project.
 	Athonet's line of work though is focused on adding value to the product upon new releases that are scheduled differently by their purpose:
 	\begin{itemize}
 		\item Bug fix
 		\item Minor release (for patching issues with the code or to improve performance)
 		\item Major release (for new features)
 	\end{itemize}
-	Sprints would disrupt the routines of the developer team, the verification team and of management.
-	In this case it would not be the tool that adapt to the company but vice versa the company would need to change in order to use the tool and would be counterproductive.\\
-	The developer manager stated that he wanted a way to measure productivity, so I showed him the reports section that is present for all kind of Jira projects.
-	
-	%todo inserire immagine reports
-	
-	Since he was not keen on the strict Agile interface with the backlog composed only by the issues that were meant to be completed in a two week period, he wanted me to show how the kanban board looked like.
-	
-	%todo inserire immangine board
-	
-	He said that it would be better for the company's way of work since developers could program their work based on what has to be completed for the next release, so for a longer period of time.\\	
-	This implied there would be a more particular workflow that had to be implemented and the managers were happy to see that it could be easily done, as for customizing the issue creation and modification menu.\\
-	They were also happy about the Internal wiki project because it suggested there could be one single tool for both internal documentation regarding clients and general notes for employees (like for example a guide on how to install Docker without loosing internet connectivity).\\	
-	After this meeting, I was put on standby because of the internal discussions that had to be done in order for the managers to understand how to adapt the workflow they had in Redmine for Jira and how to include Confluence in the mix.
-	This was not considered when writing the piano di lavoro document, but to carry on with the work I decided to start writing the documentation about installing and configuring the software, aimed for the system administrators in the IT department.
-	In the sixth week I showed it to the tutor and, after his approval, I started working on the user guide, which was written in the wiki Confluence space.
-	In order for the users to understand how to use the tools, they had to start using them.
-	
-	%todo ci sta veramente come parte? alla fine ok ho fatto ma non verrà mai usata come cosa
-%	There was an issue I noticed that would not allow unlicensed users, to enter the wiki.
-	
-	%todo project e product quoted 
-	Later on, a new meeting was scheduled with the product owner, who wanted to understand better Portfolio and how the concept of product matches the project denomination in Jira.
-	
-	%todo citare
-	%https://harbott.com/whats-the-difference-between-a-product-and-a-project-aaacfc983340
+	Sprints would disrupt the routines of their developer team, the verification team and of management.
+	In this case it would not be the tool that adapt to the company but vice versa the company would need to change in order to use the tool and would result counterproductive.\\
+	The developer manager stated that he wanted a way to measure productivity, so I showed him the \Quote{Reports} section that is present for all kind of Jira projects.
+	Here there are the burndown report charts that have been explained earlier in the text, in \ref{sec:metrics}.
+	\begin{figure}[H]
+		\centering
+		\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{resources/Annotation2019-07-24180041}}%
+		\caption{Kanban board from a Jira project}
+	\end{figure}
+	Both managers were more pleased to see that Kanban boards resembled better their way of working, even if they want to maintain some of Scrum's peculiarities.
+	The developer manager also said that it would be better for the company's way of working since developers could plan their tasks based on what has to be completed for the next release, so for a longer period of time.\\	
+	This implied there would be a more particular workflow that had to be implemented and the managers were pleased to see that it could be easily done, as for customizing the issue creation and modification menu.\\
+	They were also glad about the internal wiki project because it suggested there could be one single tool for both internal documentation regarding clients and general notes for employees.
+	The following image is an example of how an article is visualized in this wiki.
+	\begin{figure}[H]
+		\centering
+		\makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{resources/Annotation2019-07-2470331}}%
+		\caption{Screenshot of article in Jira Service Desk}
+	\end{figure}
+	Articles like this correspond to pages written in a Confluence knowledge base space connected to the Service Desk project.
+	\begin{figure}[H]
+		\centering
+		\makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{resources/Annotation2019-07-24180113}}%
+		\caption{Screenshot of a page in Confluence that is being edited}
+	\end{figure}
+	The company members needed time for internal discussions that had to be done in order for the managers to understand how to adapt the workflow they had in Redmine for Jira and how to include Confluence in the mix.
+	In this period the documentation was elaborated, anticipating it from the original plan in the \Quote{Piano di Lavoro}.\\
+	The first one to be produced was the \Quote{Installation an Configuration Guide}, written for the IT administrators and the people that would maintain, configure and eventually reinstalled if needed, the software.
+	After this was drafted and approved from the tutor, I worked on the \Quote{Final User Guide}, written in the wiki Confluence that was previously demoed.
+	Both regarding requirement \textit{O03}.
+	Later on, a new meeting was scheduled with the product owner, who wanted to understand better Portfolio and how the concept of \Quote{product} matches the \Quote{project} denomination in Jira.\\
 	Project and product sound similar and the two concepts are often confused with each other.
 	A project is a temporary endeavour, with a clear definition of what needs to be delivered and by when, it has a beginning and end date.
-	A product is designed to continually create value for customers by solving their problems.\\
+	A product is designed to continually create value for customers by solving their problems\cite{product}.\\
 	For the product owner, one of the most important things was to see how releases are mapped inside the software, since Redmine did not offer such an intuitive interface and did not allow to see them on a timeline and applying custom filters.
-	I showed him the progress I have made and he approved it, also he said that he wanted the credentials to start using it and see how to map the ongoing projects in Redmine to new ones in Jira or how to migrate them.\\
-	After using it for a couple of days and talking with the other managers, I was given a feedback on how Athonet would use these tools.
+	He approved the progress made after seeing it and also said that he wanted the credentials to start using the software and see how to map the ongoing projects in Redmine to new ones in Jira or how to eventually migrate them, as per requirement \textit{F02}.\\
+	After using it for a couple of days and talking with the other managers, he told me how they want to implement the evolution of an issue.
 	Since they were not sure letting users access Service Desk directly, an employee would create an issue that would represent the customer request through service desk.
 	The customer request could be a new feature, a bug report, require support, etc.
 	This would then be picked up by a team that would bring it inside a Business type of project by creating a linked issue.
 	This project would have a particular workflow and contains the more high lever tasks like documentation, meeting notes, feature statuses, etc.
-	These shared notes and documents would be stored in Confluence, where there would be links to them.\\
+	These shared notes and documents would be stored in Confluence, where there would be links to them.
 	After they have been approved for production another team would create a linked issue inside the software project.
 	This would most likely be divided in many sub-issues by the team leader and these would be visible by the developers.
 	Each developer could then pick an issue to work on and handle it as he wants by, for example, dividing it in smaller sub-issues.\\
-	The next week I had another meeting with more company figures: a senior developer, the business strategy manage, the managers that I have talked to in previous meetings, the CTO and my tutor.
-	As in the other meetings I have explained the various software that I have installed, the purpose for each one of them and the evolution of an issue.\\	
-	Again, to have a milestone, I have requested a snapshot of the machine by the IT department.
-	Even with the requirements changes I was on schedule with the Gantt diagram and the other planning.
+	The next week another meeting was scheduled with more company figures: a senior developer, the business strategy manage, the managers from the previous meetings, the CTO and the tutor.\\
+	As in the other meetings I have presented the software, the major use cases and progress done, referencing the objectives achieved and showing them the working system by creating issues in projects that would resemble the way of working described by them.\\
+	Even with the requirements changes that occurred, I was on schedule with the planning, a more detailed view can be seen in the Gantt diagram in \ref{gantt_2}.
+	\newpage
+	\begin{landscape}
+		\vspace*{\fill}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=22cm]{resources/UntitledDiagrammmmm}\\
+			\caption{Evolution and transitioning of an issue}
+		\end{figure}
+		The main steps that an issue passes are:
+		\begin{enumerate}
+			\item The customer reports a bug or feature request to the Customer Relationship team or through a Jira Service Desk project
+			\item The request is then picked up by the Business managers that discuss it and link it to a Jira Core issue in a dedicated project
+			\item The features that are ready to be developed are sent in the Jira Software project by the development team managers
+			\item The developers choose what to work on and commit to GitLab, which is connected with Jira Software, using special keywords
+			\item Confluence is fully connected with every other Atlassian tool and allows users to store notes and documents
+			\item Jira's Portfolio plugin is always up to date with the status of the issues and can be consulted by the managers (or developers)
+		\end{enumerate}
+		\hfill
+		\vspace*{\fill}
+	\end{landscape}
+	\newpage
 
 \section{Transitioning into Production and final feedback}
 
-	Although in the first planning this was a longer period of time, this last phase was shortened to a week.
-	%todo subordinates va bene?
-	This was due because of the many internal discussions that took place for the software to be approved and for the various managers of the departments to figure out how to introduce it to their subordinates.\\
-	After the last meeting described in the previous paragraph, I have created new users for the managers that participated and gave them the credentials so that they could see the interface and interact with the mock projects that remained there.\\
+	To better connect GitLab with Jira the plugin \Quote{GitLab Listener}\cite{gitlab-listener} was installed.
+	This allows for wider connectivity between the two products supporting custom workflows and more transitions with commit messages like:
+	\begin{center}
+		\texttt{New version \#refs ALLGEN-12 GTTSLT-2 \#time 1h 15m \#action ToDone}
+	\end{center}
+	This kind of command references two issues in two different Jira projects, telling the time spent and transitioning both to the \Quote{Done} column.
+	Installing this plugin allowed to completely fulfill requirement \textit{O04}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\textwidth]{resources/aiaiai}\\
+		\caption{Screenshot of how GitLab's messages are seen in Jira's interface\cite{gitlab-listener}}
+	\end{figure}
+	Although in the first planning this was a longer period of time, this last phase was shortened.
+	This was due because of the many internal discussions that took place for the software to be approved and for the various managers of the departments to understand how to introduce it to their subordinates.\\
+	After the last meeting, described in the previous paragraph, new users were created for the managers that participated and the credentials were given so that they could see the interface and interact with the mock projects that remained there.\\
 	The tutor had credentials as well and he was very enthusiast of how the demo performed and the potentials of the software, although this had to be well understood by the other managers and members of the company as well.\\
 	Although the last snapshot of the VM that was made contained a working infrastructure ready to be moved in a production environment, the IT department opted to wait until they understood how to properly secure the server that was going to host it.
-	%todo aggiungere VPN a glossario
-	The most important part would be creating a secure VPN tunnel that would allow outside employees that are working from other locations to connect as they would be inside the building.
+	The most important part would be creating a secure \gls{VPN tunnel}\glsadd{VPN} that would allow employees that are working from other locations outside the company to connect as if they would be inside the building.
 	This method must ensure thought that there would be no possibility for any other to get, or even hack, inside the company's network and access their products' source code.
-	Besides this, the other managers where very glad to hear that the tools have been approved and where happy about the demonstration.\\
-	%todo rivedere bene
-	Because this, I was not able to migrate any data from Redmine's instance to Jira, since I was not granted permission to access the company's private data about the source code and even if the migration would have been successful it would have not been used when Jira and Confluence were moved into production.
-	The CTO of the company and PriMo's product owner were interested in the possibility of using a real time roadmap to keep track of the work done while not going as in deep as seeing the tasks assigned to each developer.	
+	Besides this, the other managers where glad to hear that the tools have been approved and where happy about the demonstration.\\
+	Because of this restrictions from the IT department, some of the requirements could not be fulfilled: \textit{D01}, \textit{D04}, \textit{F01}, \textit{F02}.
+	These requirements could not be fulfilled because of the restrictions imposed by the IT department for interns.\\
+	It would have required me to access their production server and having access to the data that is contained in the Redmine instance, which is available only for the employees.
+	Or in case of \textit{D01} I could not fulfill the requirement because I would have needed access to the administrative passwords of Office 365.\\
 	
 \section{How are these tools being used}
-	
-	%I prefer to use more soft and vague statements, like "Even if Athonet does not go for a pure agile development's model, the tools can still help to improve the organization of their work. In fact, the tools fits their current needs, which reflect an hybrid model between Scrum and Kanban: Scrumban"
-	
-	Athonet does not want to pursue being an Agile software developing company in the near future, but it wants the tools that allow to organize their projects such that if one day their strategy varies, then the software would follow along.
-	What they really want adopt now is a hybrid between Scrum and Kanban: Scrumban.\\	
-	As in Kanban visualizing workflow, limiting work in process (WIP), and measuring productivity are prioritized.	
+	Even if Athonet does go for a pure Agile development model, the tools it has chosen to use still help to improve the organization of their work.
+	In fact, the tools fits their current needs, which reflect an hybrid model between Scrum and Kanban: \Quote{Scrumban}.
+	As in Kanban it helps visualizing workflow, limiting work in process (WIP), and measuring productivity are prioritized.	
 	Scrumban removes the practice of limiting WIP by time (i.e. velocity and Sprint boundary) and replaces it by limiting WIP for each stage.
-	It's based on having a continuous flow of work, which is what Athonet has for their products.\\	
-	%todo citare
-	%https://www.atlassian.com/agile/kanban/kanplan
-%	In Jira this aproach is called kanplan and it's well doucumented on.
-	
+	It's based on having a continuous flow of work, which is what Athonet has for their products.\\
+	In Jira, this methodology is called \Quote{Kanplan}\cite{kanplan}, and it is well documented on the \Quote{Agile Coach} section on their website.

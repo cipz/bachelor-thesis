@@ -78,7 +78,8 @@
 
 % Text layout.
 %\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper, showframe]{geometry}
-\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry}
+\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry} %PRINT VERSION
+%\RequirePackage[twoside, a4paper]{geometry} %PDF VERSION
 \usepackage{ragged2e}
 %\RaggedRight
 \RequirePackage{graphicx}

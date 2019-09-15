@@ -273,7 +273,7 @@
 %	\newpage
 	\dedicationpage
 	\abstractpage
-	\sommario
+%	\sommario
 	\tableofcontents
 	\phantomsection
 	\clearpage

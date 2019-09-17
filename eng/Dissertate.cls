@@ -78,8 +78,8 @@
 
 % Text layout.
 %\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper, showframe]{geometry}
-\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry} %PRINT VERSION
-%\RequirePackage[twoside, a4paper]{geometry} %PDF VERSION
+%\RequirePackage[outer=1in, inner=1.55in, twoside, a4paper]{geometry} %PRINT VERSION
+\RequirePackage[outer=1.275in, inner=1.275in, twoside, a4paper]{geometry} %PRINT VERSION
 \usepackage{ragged2e}
 %\RaggedRight
 \RequirePackage{graphicx}
@@ -258,7 +258,8 @@
 
 \hypersetup{
     colorlinks,
-    citecolor=SchoolColor,
+    citecolor=SchoolColor, 
+%    citecolor=black, %remove color from the references
     filecolor=black,
     linkcolor=black,
     urlcolor=SchoolColor,

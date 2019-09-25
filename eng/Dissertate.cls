@@ -303,7 +303,7 @@
 	\thispagestyle{empty}
 	\setcounter{page}{1}
 	\begin{center}
-	\vbox to0pt{\vbox to\textheight{\vfill\vspace{-2cm}\includegraphics[width=11.5cm]{resources/unipd-light} \vfill}\vss}
+%	\vbox to0pt{\vbox to\textheight{\vfill\vspace{-2cm}\includegraphics[width=11.5cm]{resources/unipd-light} \vfill}\vss}
 	%\vspace*{\fill}
 	\begin{figure}
 	\centering
